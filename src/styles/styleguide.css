@@ -3,16 +3,51 @@
 
 /* Header */
 
-.ysg-header {
+.pt-header {
   background-color: $white;
 }
 
 /* Navigation */
 
-.ysg-main-nav {
+.pt-main-nav {
   padding: $space-sm 0;
 
   &__link {
     color: $link-color;
   }
+}
+
+.pt-wrapper {
+  margin-bottom: 32px;
+  overflow: hidden;
+  border: 1px solid $muted;
+  border-radius: $radius;
+}
+
+.pt-section-heading {
+  color: $color-primary;
+}
+
+.pt-heading {
+  padding: 16px;
+  color: $white;
+  background-color: $color-primary;
+}
+
+.pt-code-block {
+
+  pre { /* stylelint-disable-line */
+    margin: 0;
+  }
+
+  &__title {
+    padding: 8px 16px;
+    margin-bottom: 0;
+    color: $white;
+    background-color: $muted;
+  }
+}
+
+.pt-example {
+  padding: 16px;
 }
