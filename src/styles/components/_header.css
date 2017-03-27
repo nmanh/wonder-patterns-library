@@ -1,0 +1,24 @@
+.header {
+
+  &__logo {
+    display: block;
+    width: 127px;
+    margin-right: $space-md;
+  }
+
+  &__main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $z-index-10;
+
+    padding: $space-md 0;
+
+    background-color: $color-info;
+  }
+
+  &__ghost {
+    height: 70px;
+  }
+}

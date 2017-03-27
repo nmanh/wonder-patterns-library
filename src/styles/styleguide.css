@@ -1,0 +1,18 @@
+/* Variables */
+@import "settings/all";
+
+/* Header */
+
+.ysg-header {
+  background-color: $white;
+}
+
+/* Navigation */
+
+.ysg-main-nav {
+  padding: $space-sm 0;
+
+  &__link {
+    color: $link-color;
+  }
+}

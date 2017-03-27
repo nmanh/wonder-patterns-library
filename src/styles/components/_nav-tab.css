@@ -1,0 +1,28 @@
+.nav-tab {
+  display: flex;
+  @include reset-default-list-style;
+
+  &__item {
+    flex: 1;
+
+    text-align: center;
+
+    border: 1px solid $muted;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: $radius $radius 0 0;
+
+    &.active {
+      border-top-color: $muted;
+      border-right-color: $muted;
+      border-bottom-color: transparent;
+      border-left-color: $muted;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: $space-sm;
+  }
+}

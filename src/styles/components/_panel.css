@@ -1,0 +1,37 @@
+.panel {
+  border-radius: $radius;
+
+  @include border($muted);
+
+  &__heading,
+  &__body,
+  &__footer {
+    padding: $space-sm;
+  }
+
+  &__heading,
+  &__footer {
+    background-color: lighten($muted, 10%);
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+}
+
+@each $type, $color in (
+  primary: $color-primary,
+  success: $color-success,
+  info: $color-info,
+  warning: $color-warning,
+  danger: $color-danger
+) {
+
+  .panel_#{$type} {
+    @include border($color);
+
+    .panel__heading {
+      background-color: $color;
+    }
+  }
+}

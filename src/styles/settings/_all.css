@@ -1,0 +1,96 @@
+/* Table of contents */
+
+/*
+ *  1. Global
+ *  2. Colors
+ *  3. Typography
+ *  4. Space
+ *  5. Media Query
+ *  6. Border
+ *  7. Misc
+ *
+ */
+
+/* 1. Global */
+$base: 16px;
+$type-scale: 1.25;
+$line-height-base: 1.4;
+
+/* 2. Colors */
+$mine-shaft: #2a2a2a;
+$white: #fff;
+$silver: #c0c0c0;
+
+$blue-jeans: #5bc0eb;
+$blue-jeans-lighten: lighten($blue-jeans, 10%);
+$blue-jeans-darken: darken($blue-jeans, 10%);
+
+$android-green: #9bc53d;
+
+$princeton-orange: #fa7921;
+
+$flame: #e55934;
+
+$color-primary: $flame;
+$color-secondary: $mine-shaft;
+$color-info: $blue-jeans;
+$color-success: $android-green;
+$color-warning: $princeton-orange;
+$color-danger: $flame;
+
+$body-bg: $white;
+$body-color: $mine-shaft;
+$link-color: $flame;
+$muted: $silver;
+
+/* 3. Typography */
+$font-sans-serif: "Source Sans Pro", sans-serif;
+// $font-serif: Bitter, serif;
+$font-special: Damion, cursive; /* This is optional, remove if nessesary */
+
+$font-family-body: $font-sans-serif;
+// $font-family-heading: $font-serif;
+
+$font-size-h1: ($base * $type-scale * $type-scale * $type-scale * $type-scale);
+$font-size-h2: ($base * $type-scale * $type-scale * $type-scale);
+$font-size-h3: ($base * $type-scale * $type-scale);
+$font-size-h4: ($base * $type-scale);
+$font-size-h5: $base;
+$font-size-h6: ($base / $type-scale);
+$font-size-base: $base;
+
+$font-weight-base: 400;
+$font-weight-bold: 700;
+
+/* 4. Space */
+$space-xs: ($base / 4);
+$space-sm: ($base / 2);
+$space-md: $base;
+$space-lg: ($base * 2);
+$space-xlg: ($base * 4);
+
+/* 5. Media Query */
+@custom-media --small-only (max-width: 39.9375rem);
+@custom-media --medium-up (min-width: 40rem);
+@custom-media --large-up (min-width: 64rem);
+
+/* 6. Border */
+$radius: 4px;
+$radius-big: $base;
+$border-color: $silver;
+
+/* 7. Misc */
+$opacity: 0.6;
+
+// nature z-index = 0
+// z-index-10 = 10
+// z-index-20 = 20
+// z-index-max = 100
+$z-index-10: 10;
+$z-index-20: 20;
+$z-index-max: 100;
+
+$btn-group-dropdown-menu: 160px;
+
+$transition-time: 0.25s;
+$transition-effect: ease-in;

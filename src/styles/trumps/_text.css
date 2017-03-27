@@ -1,0 +1,29 @@
+.txt-large {
+  font-size: $font-size-h3;
+}
+
+.txt-small {
+  font-size: $font-size-h6;
+}
+
+.txt-muted {
+  color: $muted;
+}
+
+.txt-bold {
+  font-weight: $font-weight-bold;
+}
+
+/* Alignment */
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-right {
+  text-align: right;
+}
