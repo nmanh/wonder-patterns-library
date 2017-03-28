@@ -135,6 +135,7 @@ button,
 select,
 textarea,
 optgroup {
+  font-size: $base;
   font-family: $font-family-body;
   font-weight: $font-weight-base;
   line-height: inherit;

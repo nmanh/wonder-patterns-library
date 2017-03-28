@@ -17,6 +17,10 @@
   &__title {
     margin-bottom: 0;
   }
+
+  &__footer {
+    border-radius: 0 0 $radius $radius;
+  }
 }
 
 @each $type, $color in (

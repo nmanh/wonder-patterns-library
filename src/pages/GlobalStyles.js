@@ -1,31 +1,59 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import {
+  Route,
+  Switch
+} from 'react-router-dom';
 import {
   Typography,
   Buttons,
+  Form,
 } from '../components/global-styles';
+import { PLSubNav } from '../components/patterns-library';
 
-const GlobalStyles = ({ match }) => (
-  <div>
-    <ul>
-      <li>
-        <Link to={match.url}>Overview</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/typography`}>Typography</Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/buttons`}>Buttons</Link>
-      </li>
-    </ul>
-    <h1>Global Styles</h1>
+class GlobalStyles extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nav: [
+        {
+          name: 'Overview',
+          url: props.match.url,
+        },
+        {
+          name: 'Typography',
+          url: `${props.match.url}/typography`,
+        },
+        {
+          name: 'Buttons',
+          url: `${props.match.url}/buttons`,
+        },
+        {
+          name: 'Form',
+          url: `${props.match.url}/form`,
+        },
+      ],
+    };
+  }
 
-    <Route exact path={`${match.url}/typography`} component={Typography} />
-    <Route exact path={`${match.url}/buttons`} component={Buttons} />
-    <Route exact path={match.url} render={() => (
-      <h2>Overview</h2>
-    )} />
-  </div>
-);
+  render() {
+    const { match } = this.props;
+
+    return (
+      <div>
+        <PLSubNav dataSource={this.state.nav} />
+        <h1>Global Styles</h1>
+
+        <Switch>
+          <Route path={`${match.url}/typography`} component={Typography} />
+          <Route path={`${match.url}/buttons`} component={Buttons} />
+          <Route path={`${match.url}/form`} component={Form} />
+          <Route path={match.url} render={() => (
+            <h2>Overview</h2>
+          )} />
+        </Switch>
+      </div>
+    )
+  }
+}
 
 export default GlobalStyles;
