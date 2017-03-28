@@ -9,6 +9,25 @@
 
 /* Navigation */
 
+.pt-main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+
+  background-color: $color-primary;
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    padding: $space-sm $space-md;
+    color: $white;
+  }
+}
+
 .pt-sub-nav {
   padding: $space-sm 0;
   margin: 0;
@@ -19,8 +38,12 @@
   }
 
   &__link {
+    display: block;
     padding: $space-sm;
+    margin-bottom: $space-sm;
+
     color: $white;
+
     background-color: $color-primary;
     border-radius: $radius;
   }
@@ -28,7 +51,7 @@
 
 .pt-wrapper {
   margin-bottom: 32px;
-  border: 1px solid $color-primary;
+  border: 1px solid $muted;
   border-radius: $radius;
 }
 
@@ -39,7 +62,7 @@
 .pt-heading {
   padding: 16px;
   color: $white;
-  background-color: $color-primary;
+  background-color: $muted;
 }
 
 .pt-code-block {
@@ -58,5 +81,5 @@
 }
 
 .pt-example {
-  padding: 16px;
+  padding: 32px 16px;
 }

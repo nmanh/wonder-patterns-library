@@ -11,10 +11,10 @@ const ButtonTags = () => (
   <PLWrapper>
     <PLHeading text="Button Tags" />
     <PLExample>
-      <a className="btn mrsm" href="#" role="button">Link</a>
-      <button className="btn mrsm">Button</button>
-      <input className="btn mrsm" type="button" value="Input" />
-      <input className="btn mrsm" type="submit" value="Submit" />
+      <a className="btn mbsm mrsm" href="#" role="button">Link</a>
+      <button className="btn mbsm mrsm">Button</button>
+      <input className="btn mbsm mrsm" type="button" value="Input" />
+      <input className="btn mbsm mrsm" type="submit" value="Submit" />
     </PLExample>
     <PLCodeBlock>
       {`
@@ -31,12 +31,12 @@ const Options = () => (
   <PLWrapper>
     <PLHeading text="Options" />
     <PLExample>
-      <button className="btn btn_primary mrsm">Primary</button>
-      <button className="btn btn_success mrsm">Success</button>
-      <button className="btn btn_info mrsm">Info</button>
-      <button className="btn btn_warning mrsm">Warning</button>
-      <button className="btn btn_danger mrsm">Danger</button>
-      <button className="btn btn_special">Special</button>
+      <button className="btn btn_primary mbsm mrsm">Primary</button>
+      <button className="btn btn_success mbsm mrsm">Success</button>
+      <button className="btn btn_info mbsm mrsm">Info</button>
+      <button className="btn btn_warning mbsm mrsm">Warning</button>
+      <button className="btn btn_danger mbsm mrsm">Danger</button>
+      <button className="btn btn_special mbsm">Special</button>
     </PLExample>
     <PLCodeBlock>
       {`
@@ -56,12 +56,12 @@ const Sizes = () => (
     <PLHeading text="Sizes" />
     <PLExample>
       <div className="mbsm">
-        <button className="btn btn_large mrsm">Large button</button>
-        <button className="btn btn_primary btn_large">Large button</button>
+        <button className="btn btn_large mbsm mrsm">Large button</button>
+        <button className="btn btn_primary btn_large mbsm">Large button</button>
       </div>
       <div className="mbsm">
-        <button className="btn mrsm">Default button</button>
-        <button className="btn btn_primary">Default button</button>
+        <button className="btn mbsm mrsm">Default button</button>
+        <button className="btn btn_primary mbsm">Default button</button>
       </div>
       <div className="mbmd">
         <button className="btn btn_small mrsm">Small button</button>
@@ -103,8 +103,8 @@ const Disable = () => (
   <PLWrapper>
     <PLHeading text="Disable" />
     <PLExample>
-      <button disabled title="Disabled" className="btn btn_primary mrsm">Button disable</button>
-      <button disabled title="Disabled" className="btn">Button disable</button>
+      <button disabled title="Disabled" className="btn btn_primary mbsm mrsm">Button disable</button>
+      <button disabled title="Disabled" className="btn mbsm">Button disable</button>
     </PLExample>
     <PLCodeBlock>
       {`

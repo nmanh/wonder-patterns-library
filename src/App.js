@@ -16,13 +16,19 @@ class App extends Component {
       <Router>
         <div className="row">
           <div className="small-12 column">
-            <ul>
-              <li><Link to="/">Getting Started</Link></li>
-              <li>
-                <Link to="/global-styles">Global Styles</Link>
+            <ul className="pt-main-nav">
+              <li className="pt-main-nav__item">
+                <Link to="/" className="pt-main-nav__link">Getting Started</Link>
               </li>
-              <li><Link to="/ui-components">UI Components</Link></li>
-              <li><Link to="/css-utilities">CSS Utilities</Link></li>
+              <li className="pt-main-nav__item">
+                <Link to="/global-styles" className="pt-main-nav__link">Global Styles</Link>
+              </li>
+              <li className="pt-main-nav__item">
+                <Link to="/ui-components" className="pt-main-nav__link">UI Components</Link>
+              </li>
+              <li className="pt-main-nav__item">
+                <Link to="/css-utilities" className="pt-main-nav__link">CSS Utilities</Link>
+              </li>
             </ul>
             <hr/>
           </div>
