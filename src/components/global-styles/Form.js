@@ -93,6 +93,22 @@ const Textarea = () => (
   </PLWrapper>
 );
 
+const FormInline = () => (
+  <PLWrapper>
+    <PLHeading text="Form inline" />
+    <PLExample>
+      <input type="email" placeholder="Email" className="f__control f__control_inline" id="email" />
+      <button className="btn btn_primary">Register</button>
+    </PLExample>
+    <PLCodeBlock>
+      {`
+        <input type="email" placeholder="Email" className="f__control f__control_inline" id="email" />
+        <button className="btn btn_primary">Register</button>
+      `}
+    </PLCodeBlock>
+  </PLWrapper>
+)
+
 const Checkboxes = () => (
   <PLWrapper>
     <PLHeading text="Checkboxes (default stacked)" />
@@ -391,6 +407,7 @@ export const Form = () => (
     <BasicExample />
     <Inputs />
     <Textarea />
+    <FormInline />
     <Checkboxes />
     <CheckboxesInline />
     <Radios />

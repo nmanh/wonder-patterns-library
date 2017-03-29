@@ -133,7 +133,7 @@ class LiveDemo extends React.Component {
                 </div>
                 <div className="modal__footer">
                   <div className="pull-right">
-                    <button className="btn mrmd">Close</button>
+                    <button className="btn mrmd" onMouseDown={this.hideModal}>Close</button>
                     <button className="btn btn_primary">Save changes</button>
                   </div>
                 </div>

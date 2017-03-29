@@ -1,28 +1,51 @@
 .nav-tab {
   display: flex;
+
+  border-bottom: 2px solid $muted;
+
   @include reset-default-list-style;
 
   &__item {
     flex: 1;
 
+    margin-bottom: -2px;
+
     text-align: center;
 
-    border: 1px solid $muted;
+    border: 2px solid $muted;
     border-top-color: transparent;
     border-right-color: transparent;
+    border-bottom-color: transparent;
     border-left-color: transparent;
-    border-radius: $radius $radius 0 0;
 
     &.active {
-      border-top-color: $muted;
+      border-top-color: $color-primary;
       border-right-color: $muted;
-      border-bottom-color: transparent;
+      border-bottom-color: $white;
       border-left-color: $muted;
+
+      &:first-child {
+        border-left-color: transparent;
+      }
+
+      &:last-child {
+        border-right-color: transparent;
+      }
+
+      .nav-tab__link {
+        color: $color-primary;
+      }
     }
   }
 
   &__link {
     display: block;
     padding: $space-sm;
+
+    color: $body-color;
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }

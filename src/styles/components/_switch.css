@@ -20,7 +20,7 @@
 
   &__paddle {
     display: inline-block;
-    size: $space-xlg $space-lg;
+    size: $space-xxlg $space-xlg;
     margin-bottom: 0;
 
     cursor: pointer;

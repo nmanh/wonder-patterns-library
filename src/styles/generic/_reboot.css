@@ -107,7 +107,7 @@ figure {
 img {
   max-width: 100%;
 
-  /* vertical-align: middle; */
+   vertical-align: middle;
 }
 
 /* 7. Tables */
@@ -137,7 +137,7 @@ button,
 select,
 textarea,
 optgroup {
-  font-size: $base;
+  font-size: $font-size-base;
   font-family: $font-family-body;
   font-weight: $font-weight-base;
   line-height: inherit;

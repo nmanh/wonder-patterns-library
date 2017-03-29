@@ -56,7 +56,7 @@ class Example extends React.Component {
       <PLWrapper>
         <PLHeading text="Example" />
         <PLExample>
-          <ul id="nav-tab" className="nav-tab mblg">
+          <ul id="nav-tab" className="nav-tab">
             {this.state.tabs.map((item, index) => (
               <li
                 key={item.name}
@@ -77,7 +77,7 @@ class Example extends React.Component {
         </PLExample>
         <PLCodeBlock>
           {`
-            <ul id="nav-tab" className="nav-tab mblg">
+            <ul id="nav-tab" className="nav-tab">
               <li role="presentation" className="nav-tab__item active">
                 <a href="#" className="nav-tab__link">Suggess</a>
               </li>

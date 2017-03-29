@@ -2,11 +2,12 @@
 @import "button";
 @import "form";
 @import "media";
-@import "header";
+@import "app-header";
 @import "panel";
 @import "modal";
 @import "switch";
 @import "section-header";
 @import "nav-tab";
 @import "nav";
+@import "divider";
 @import "loader";

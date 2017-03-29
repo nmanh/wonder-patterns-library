@@ -1,22 +1,24 @@
 .nav {
+  display: flex;
 
-  &__list {
-    text-align: right;
-
-    @include reset-default-list-style;
-  }
-
-  &__item {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: $space-md;
-    }
-  }
+  font-size: $font-size-h4;
+  text-align: center;
 
   &__link {
+    flex: 1;
+    padding: $space-lg $space-sm;
+
     line-height: 1;
 
     color: $white;
+
+    transition: background-color $transition-time $transition-effect;
+
+    &.active,
+    &:hover {
+      color: $white;
+
+      background-color: lighten($color-primary, 10%);
+    }
   }
 }

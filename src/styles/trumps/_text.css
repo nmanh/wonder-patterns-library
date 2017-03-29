@@ -1,5 +1,5 @@
 .txt-large {
-  font-size: $font-size-h3;
+  font-size: $font-size-h4;
 }
 
 .txt-small {
@@ -26,4 +26,18 @@
 
 .txt-right {
   text-align: right;
+}
+
+/* Colors */
+
+.txt-white {
+  color: $white;
+}
+
+.txt-primary-color {
+  color: $color-primary;
+}
+
+.txt-body-color {
+  color: $body-color;
 }

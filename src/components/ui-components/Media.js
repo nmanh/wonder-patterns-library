@@ -16,7 +16,7 @@ export const Media = () => (
         <div className="media">
           <a href="#" className="media__content">
             <div className="media__head">
-              <img src="http://placehold.it/100x100" alt=""/>
+              <img src="https://unsplash.it/100x100" className="img-circle" alt=""/>
             </div>
             <div className="media__body">
               <div className="txt-large">Joe Dohn</div>
@@ -34,7 +34,7 @@ export const Media = () => (
           <div className="media">
             <a href="#" className="media__content">
               <div className="media__head">
-                <img src="http://placehold.it/100x100" alt=""/>
+                <img src="https://unsplash.it/100x100" className="img-circle" alt=""/>
               </div>
               <div className="media__body">
                 <div className="txt-large">Joe Dohn</div>

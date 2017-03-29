@@ -2,7 +2,7 @@
 
   &__control {
     display: block;
-    size: 100% $space-lg;
+    size: 100% $space-xlg;
     padding: $space-xs $space-sm;
 
     background-color: $white;
@@ -20,6 +20,13 @@
     &[disabled] {
       background-color: lighten($muted, 20%);
       opacity: $opacity;
+    }
+
+    /* inline */
+
+    &_inline {
+      display: inline-block;
+      width: auto;
     }
 
     /* reset height */
