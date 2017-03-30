@@ -21,7 +21,7 @@
     }
 
     &_circle {
-      size: $space-xlg;
+      size: $space-xxlg;
 
       border-radius: 50%;
     }

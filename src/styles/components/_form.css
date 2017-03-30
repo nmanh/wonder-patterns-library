@@ -29,17 +29,19 @@
       width: auto;
     }
 
-    /* reset height */
-
-    &_rh {
-      height: auto;
-    }
-
     /* input group */
 
     &_ig {
       display: table-cell;
       float: left;
+    }
+
+    /* input group */
+
+    &_large {
+      height: auto;
+      padding-top: $space-sm;
+      padding-bottom: $space-sm;
     }
   }
 
@@ -100,4 +102,9 @@
     background-color: $muted;
     border-radius: $radius;
   }
+}
+
+// allow textarea auto span
+textarea.f__control { /* stylelint-disable-line */
+  height: auto;
 }

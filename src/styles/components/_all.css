@@ -9,5 +9,7 @@
 @import "section-header";
 @import "nav-tab";
 @import "nav";
+@import "carousel";
 @import "divider";
 @import "loader";
+@import "badge";

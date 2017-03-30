@@ -79,6 +79,20 @@ const Inputs = () => (
   </PLWrapper>
 );
 
+const InputLarge = () => (
+  <PLWrapper>
+    <PLHeading text="Input large" />
+    <PLExample>
+      <input type="email" placeholder="Input control" className="f__control f__control_large" />
+    </PLExample>
+    <PLCodeBlock>
+      {`
+        <input className="f__control f__control_large" />
+      `.trim().replace(/>\s+/, '')}
+    </PLCodeBlock>
+  </PLWrapper>
+);
+
 const Textarea = () => (
   <PLWrapper>
     <PLHeading text="Textarea" />
@@ -406,6 +420,7 @@ export const Form = () => (
     <PLSectionHeading text="Form" />
     <BasicExample />
     <Inputs />
+    <InputLarge />
     <Textarea />
     <FormInline />
     <Checkboxes />

@@ -3,14 +3,14 @@
 
   @include border($muted);
 
-  &__heading,
-  &__body,
-  &__footer {
-    padding: $space-sm;
+  &__body {
+    padding: $space-md;
   }
 
   &__heading,
   &__footer {
+    padding: $space-sm $space-md;
+
     background-color: lighten($muted, 10%);
   }
 
@@ -20,6 +20,21 @@
 
   &__footer {
     border-radius: 0 0 $radius $radius;
+  }
+
+  // panel special need difference look
+
+  &_special {
+    background-color: lighten($color-primary, 48%);
+
+    @include border(lighten($color-primary, 48%));
+
+    .panel__heading {
+      text-transform: uppercase;
+
+      background-color: transparent;
+      border-bottom: $space-sm solid lighten($color-primary, 30%);
+    }
   }
 }
 

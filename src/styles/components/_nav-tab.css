@@ -42,6 +42,7 @@
     display: block;
     padding: $space-sm;
 
+    font-weight: $font-weight-normal;
     color: $body-color;
 
     &:hover {

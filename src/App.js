@@ -16,28 +16,23 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <div className="row">
-            <div className="small-12 column">
-              <ul className="pt-main-nav">
-                <li className="pt-main-nav__item">
-                  <Link to="/" className="pt-main-nav__link">Getting Started</Link>
-                </li>
-                <li className="pt-main-nav__item">
-                  <Link to="/global-styles" className="pt-main-nav__link">Global Styles</Link>
-                </li>
-                <li className="pt-main-nav__item">
-                  <Link to="/ui-components" className="pt-main-nav__link">UI Components</Link>
-                </li>
-                <li className="pt-main-nav__item">
-                  <Link to="/css-utilities" className="pt-main-nav__link">CSS Utilities</Link>
-                </li>
-                <li className="pt-main-nav__item">
-                  <Link to="/pages/homepage" className="pt-main-nav__link">Homepage</Link>
-                </li>
-              </ul>
-              <hr/>
-            </div>
-          </div>
+          <ul className="pt-main-nav">
+            <li className="pt-main-nav__item">
+              <Link to="/" className="pt-main-nav__link">Getting Started</Link>
+            </li>
+            <li className="pt-main-nav__item">
+              <Link to="/global-styles" className="pt-main-nav__link">Global Styles</Link>
+            </li>
+            <li className="pt-main-nav__item">
+              <Link to="/ui-components" className="pt-main-nav__link">UI Components</Link>
+            </li>
+            <li className="pt-main-nav__item">
+              <Link to="/css-utilities" className="pt-main-nav__link">CSS Utilities</Link>
+            </li>
+            <li className="pt-main-nav__item">
+              <Link to="/pages/homepage" className="pt-main-nav__link">Homepage</Link>
+            </li>
+          </ul>
 
           <div className="row">
             <div className="small-12 column">

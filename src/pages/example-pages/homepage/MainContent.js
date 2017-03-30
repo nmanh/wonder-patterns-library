@@ -2,8 +2,10 @@ import React from 'react';
 import 'slick-carousel/slick/slick';
 import 'slick-carousel/slick/slick.css';
 import $ from 'jquery';
+import { ButtonDropdown } from '../general-components';
+import { Loader } from './Loader';
 
-const PostHasAnswer = () => (
+const PostHasAnswer = ({ openAnswerModal }) => (
   <article className="mbxlg">
     <div>
       {/* Tags */}
@@ -46,11 +48,18 @@ const PostHasAnswer = () => (
       </div>
     </div>
 
-    <p>
-      {/* Answer's content */}
-      Chiều 29/3, trao đổi với Zing.vn, ông Đoàn Ngọc Hải, Phó chủ tịch UBND quận 1, cho biết đoàn kiểm tra liên ngành của quận 1 sẽ tạm dừng hoạt động dẹp vỉa hè. Việc này sẽ được các phường tiếp tục đẩy mạnh, quyết liệt trong thời gian tới.<br />
-      "Tôi tạm thời dừng, việc dẹp vỉa hè được quận giao lại cho các phường tăng tốc, quyết liệt làm. Những vụ việc nào nóng, khó, anh em địa bàn làm không được thì tôi sẽ đích thân xuống giải quyết", ông Hải nói...<a href="#">Xem thêm </a>
-    </p>
+    <div className="mbmd">
+      <a
+        href="#"
+        onMouseDown={(evt) => {
+          evt.preventDefault();
+          openAnswerModal();
+        }}>
+        {/* Answer's content */}
+        <span className="txt-body-color">Chiều 29/3, trao đổi với Zing.vn, ông Đoàn Ngọc Hải, Phó chủ tịch UBND quận 1, cho biết đoàn kiểm tra liên ngành của quận 1 sẽ tạm dừng hoạt động dẹp vỉa hè. Việc này sẽ được các phường tiếp tục đẩy mạnh, quyết liệt trong thời gian tới.<br />
+        "Tôi tạm thời dừng, việc dẹp vỉa hè được quận giao lại cho các phường tăng tốc, quyết liệt làm. Những vụ việc nào nóng, khó, anh em địa bàn làm không được thì tôi sẽ đích thân xuống giải quyết", ông Hải nói...</span>Xem thêm
+      </a>
+    </div>
 
     <div>
       {/* Question actions */}
@@ -62,13 +71,11 @@ const PostHasAnswer = () => (
           <a href="#" className="txt-muted mrmd">Bình luận (4)</a>
         </div>
 
-        <a href="#">
-          <i className="fa fa-ellipsis-h fa-2x" />
-        </a>
+        <ButtonDropdown />
       </div>
     </div>
   </article>
-);
+)
 
 const PostNoAnswer = () => (
   <article className="mbxlg">
@@ -102,19 +109,36 @@ const PostNoAnswer = () => (
           <a href="#" className="txt-muted mrmd">Downvote</a>
         </div>
 
-        <a href="#">
-          <i className="fa fa-ellipsis-h fa-2x" />
-        </a>
+        <ButtonDropdown />
       </div>
     </div>
   </article>
 );
 
 class LiveSession extends React.Component {
+  constructor() {
+    super();
+
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+  }
+
   componentDidMount() {
+    // initial carousel
     $(this.slider).slick({
-      centerMode: true
+      slidesToShow: 3,
+      centerPadding: '16px',
+      infinite: false,
+      arrows: false,
     });
+  }
+
+  goToPrevSlide() {
+    $(this.slider).slick('slickPrev');
+  }
+
+  goToNextSlide() {
+    $(this.slider).slick('slickNext');
   }
 
   render() {
@@ -128,17 +152,36 @@ class LiveSession extends React.Component {
           <button className="btn btn_special">Live session</button>
         </div>
 
-        <div ref={(ref) => this.slider = ref}>
+        <div className="carousel">
+          <div ref={(ref) => this.slider = ref}>
             {[1, 2, 3, 4, 5, 6].map(item => (
-              <div className="txt-center">
+              <a href="#" className="txt-center" key={item}>
                 <img
                   src="https://unsplash.it/100"
                   className="img-circle mbmd"
                   alt=""
-                  key={item}
                 />
-              </div>
+                <div className="txt-bold txt-body-color">Ms. Lisa Chan</div>
+                <div className="txt-body-color">Communicate English<br />on</div>
+                <div className="txt-bold txt-uppercase txt-body-color">IELTS 6.0 Writing</div>
+                <div>now broadcasting</div>
+              </a>
             ))}
+          </div>
+          <button
+            className="carousel__narrow carousel__narrow_prev"
+            ref={(ref) => this.narrowPrev = ref}
+            onMouseDown={this.goToPrevSlide}
+          >
+            <i className="fa fa-chevron-left fa-lg" />
+          </button>
+          <button
+            className="carousel__narrow carousel__narrow_next"
+            ref={(ref) => this.narrowNext = ref}
+            onMouseDown={this.goToNextSlide}
+          >
+            <i className="fa fa-chevron-right fa-lg" />
+          </button>
         </div>
       </div>
     );
@@ -149,7 +192,7 @@ const Divider = () => (
   <div className="divider mbxlg" />
 );
 
-export const MainContent = () => (
+export const MainContent = ({ openAnswerModal, openAskModal }) => (
   <div>
     <ul id="nav-tab" className="nav-tab mblg">
       <li role="presentation" className="nav-tab__item active">
@@ -163,26 +206,35 @@ export const MainContent = () => (
       </li>
     </ul>
 
-    <a href="#" className="lf lf_align-middle mblg">
+    <a
+      href="#"
+      className="lf lf_align-middle mblg"
+      onClick={(e) => {
+        e.preventDefault();
+        openAskModal();
+      }}
+    >
       <img src="https://unsplash.it/60x60" className="img-circle mrlg" alt=""/>
       <span>Hi Linh! Click vào đây để đặt câu hỏi nhé</span>
     </a>
 
     <Divider />
 
-    <PostHasAnswer />
+    <PostHasAnswer openAnswerModal={openAnswerModal} />
     <Divider />
-    <PostHasAnswer />
+    <PostHasAnswer openAnswerModal={openAnswerModal} />
     <Divider />
 
     <LiveSession />
     <Divider />
 
-    <PostHasAnswer />
+    <PostHasAnswer openAnswerModal={openAnswerModal} />
     <Divider />
 
     <PostNoAnswer />
     <Divider />
+
+    <Loader />
 
   </div>
 );

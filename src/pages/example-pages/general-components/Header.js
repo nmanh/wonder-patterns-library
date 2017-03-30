@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Header = () => (
+export const Header = ({ openAskModal }) => (
   <header className="app-header mbxxlg">
     <div className="app-header__main">
 
@@ -10,29 +10,36 @@ export const Header = () => (
           <img src="https://unsplash.it/140/50" alt="logo" />
         </div>
 
-        <form className="f lf_full-space mrlg">
-          <div className="row">
-            <div className="medium-8 columns">
+        <div className="row lf_full-space mrlg">
+          <div className="medium-8 columns">
+            <form className="f">
               <input
-                className="f__control"
+                className="f__control f__control_large shadow"
                 type="search"
                 placeholder="Tim kiem Q&A, blog, chu de va tai lieu hoc"
               />
-            </div>
-            <div className="medium-4 columns">
-              <button className="btn btn_warning">Hỏi</button>
-            </div>
+            </form>
           </div>
-        </form>
+          <div
+            className="medium-4 columns"
+            onMouseDown={openAskModal}
+          >
+            <button className="btn btn_warning btn_large shadow txt-uppercase">Hỏi</button>
+          </div>
+        </div>
 
-        <a href="#" className="txt-white mrxlg">
-          <i className="fa fa-bell fa-lg" />
+        <a href="#" className="badge mrxlg txt-white">
+          <div className="badge__icon">
+            <i className="fa fa-bell-o fa-lg" />
+          </div>
+          <div className="badge__addon">4</div>
         </a>
+
         <div>
           <a href="#" className="lf lf_align-middle txt-white">
             <img src="https://unsplash.it/40" className="img-circle mrsm" alt="avatar" />
             <div>
-              <span className="mrsm">Looooooooong name</span>
+              <span className="mrsm">Linh duong</span>
               <i className="fa fa-angle-down"></i>
             </div>
           </a>

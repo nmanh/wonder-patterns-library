@@ -63,6 +63,17 @@
     display: block;
     width: 100%;
   }
+
+  &_reset {
+    padding: 0;
+    border: 0;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
 }
 
 /* Generate button options except special */
@@ -96,7 +107,7 @@
   }
 }
 
-.btn-group {
+.btn-dropdown {
   position: relative;
 
   display: inline-block;

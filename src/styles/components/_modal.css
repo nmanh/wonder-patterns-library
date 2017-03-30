@@ -18,7 +18,7 @@
   &__dialog {
     width: 100%;
     max-width: 600px;
-    margin: $space-xlg auto;
+    margin: ($base * 10) auto;
   }
 
   &__content {
@@ -38,7 +38,7 @@
   &__header,
   &__body,
   &__footer {
-    padding: $space-sm;
+    padding: $space-sm $space-md;
   }
 
   &__header {
@@ -63,10 +63,6 @@
   &__footer {
     clear: fix;
     border-top: 1px solid $muted;
-  }
-
-  &__ghost {
-    position: fixed 0;
   }
 
   // only use in styleguide

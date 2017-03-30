@@ -64,7 +64,6 @@ const StaticModal = () => (
 
             </div>
           </div>
-          <div className="modal__ghost" role="presentation" />
         </div>
       `}
     </PLCodeBlock>
@@ -111,8 +110,13 @@ class LiveDemo extends React.Component {
             tabIndex="-1"
             role="dialog"
             ref={(ref) => {this.modal = ref}}
+            onMouseDown={this.hideModal}
           >
-            <div className="modal__dialog" role="document">
+            <div
+              className="modal__dialog"
+              role="document"
+              onMouseDown={(e) => e.stopPropagation()}
+            >
               <div className="modal__content fade-in-down">
                 <div className="modal__header">
                   <h3 className="modal__title">Modal example</h3>
@@ -139,11 +143,6 @@ class LiveDemo extends React.Component {
                 </div>
               </div>
             </div>
-            <div
-              className="modal__ghost"
-              role="presentation"
-              onMouseDown={this.hideModal}
-            />
           </div>
         </PLExample>
       </PLWrapper>

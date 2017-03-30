@@ -10,6 +10,7 @@ import {
   NavTab,
   Nav,
   Divider,
+  Badge,
 } from '../components/ui-components';
 import { PLSubNav } from '../components/patterns-library';
 
@@ -27,6 +28,10 @@ class UIComponents extends React.Component {
           url: `${props.match.url}/media`,
         },
         {
+          name: 'Panel',
+          url: `${props.match.url}/panel`,
+        },
+        {
           name: 'Modal',
           url: `${props.match.url}/modal`,
         },
@@ -41,6 +46,10 @@ class UIComponents extends React.Component {
         {
           name: 'Divider',
           url: `${props.match.url}/divider`,
+        },
+        {
+          name: 'Badge',
+          url: `${props.match.url}/badge`,
         },
       ]
     }
@@ -59,6 +68,7 @@ class UIComponents extends React.Component {
           <Route path={`${match.url}/nav-tab`} component={NavTab} />
           <Route path={`${match.url}/nav`} component={Nav} />
           <Route path={`${match.url}/divider`} component={Divider} />
+          <Route path={`${match.url}/badge`} component={Badge} />
           <Route path={match.url} render={() => (
             <h2>Overview</h2>
           )} />

@@ -54,6 +54,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: $space-sm;
+  font-weight: $font-weight-normal;
 }
 
 p {

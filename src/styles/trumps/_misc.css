@@ -1,0 +1,3 @@
+.shadow {
+  box-shadow: $space-xs $space-xs $space-xs rgba($body-color, 0.4);
+}

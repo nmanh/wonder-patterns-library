@@ -67,7 +67,8 @@ $font-size-h4: ($font-size-base * $type-scale);
 $font-size-h5: $font-size-base;
 $font-size-h6: ($font-size-base / $type-scale);
 
-$font-weight-base: 400;
+$font-weight-base: 300;
+$font-weight-normal: 400;
 $font-weight-bold: 700;
 
 /* 4. Space */

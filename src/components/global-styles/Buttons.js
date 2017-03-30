@@ -139,27 +139,27 @@ class ButtonDropdown extends React.Component {
       <PLWrapper>
         <PLHeading text="Button Dropdown" />
         <PLExample>
-          <div className="btn-group">
+          <div className="btn-dropdown">
             <button
-              className="btn btn-group__btn"
+              className="btn btn-dropdown__btn"
               onMouseDown={this.toggleMenu}
               onBlur={this.hideMenu}
             >
               Button <i className="fa fa-caret-down"></i>
             </button>
-            <ul className={this.state.isMenuOpen ? 'btn-group__menu open' : 'btn-group__menu'}>
-              <li className="btn-group__menu-item"><a href="#"><i className="fa fa-pencil"></i> Edit</a></li>
-              <li className="btn-group__menu-item"><a href="#"><i className="fa fa-trash"></i> Delete</a></li>
+            <ul className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
+              <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-pencil"></i> Edit</a></li>
+              <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-trash"></i> Delete</a></li>
             </ul>
           </div>
         </PLExample>
         <PLCodeBlock>
           {`
-            <div className="btn-group">
-              <button className="btn btn-group__btn">Button<i className="fa fa-caret-down"></i></button>
-              <ul className="btn-group__menu">
-                <li className="btn-group__menu-item"><a href="#"><i className="fa fa-pencil"></i> Edit</a></li>
-                <li className="btn-group__menu-item"><a href="#"><i className="fa fa-trash"></i> Delete</a></li>
+            <div className="btn-dropdown">
+              <button className="btn btn-dropdown__btn">Button<i className="fa fa-caret-down"></i></button>
+              <ul className="btn-dropdown__menu">
+                <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-pencil"></i> Edit</a></li>
+                <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-trash"></i> Delete</a></li>
               </ul>
             </div>
           `}
