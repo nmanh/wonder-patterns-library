@@ -42,13 +42,13 @@ class HomePage extends React.Component {
           openAskModal={this.openAskModal}
         />
         <div className="row">
-          <div className="medium-9 columns">
+          <div className="large-9 columns">
             <MainContent
               openAnswerModal={this.openAnswerModal}
               openAskModal={this.openAskModal}
             />
           </div>
-          <div className="medium-3 columns">
+          <div className="large-3 columns">
             <SideBar />
           </div>
         </div>

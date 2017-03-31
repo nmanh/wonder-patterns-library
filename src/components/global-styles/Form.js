@@ -25,7 +25,7 @@ const BasicExample = () => (
         <div className="mbmd">
           <label htmlFor="exampleInputFile">File input</label>
           <input type="file" className="mbxs"/>
-          <p className="txt-muted">Example block-level help text here.</p>
+          <span className="f__help-text">Accept .jpg, .jpeg, .png format</span>
         </div>
         <div className="f__checkbox">
           <label>
@@ -51,7 +51,7 @@ const BasicExample = () => (
           <div className="mbmd">
             <label htmlFor="exampleInputFile">File input</label>
             <input type="file" className="mbxs"/>
-            <p className="txt-muted">Example block-level help text here.</p>
+            <span className="f__help-text">Accept .jpg, .jpeg, .png format</span>
           </div>
           <div className="f__checkbox">
             <label>
@@ -97,11 +97,11 @@ const Textarea = () => (
   <PLWrapper>
     <PLHeading text="Textarea" />
     <PLExample>
-      <textarea rows="3" className="f__control f__control_rh"></textarea>
+      <textarea rows="3" className="f__control"></textarea>
     </PLExample>
     <PLCodeBlock>
       {`
-        <textarea className="f__control f__control_rh" rows="3"></textarea>
+        <textarea className="f__control" rows="3"></textarea>
       `.trim().replace(/>\s+/, '')}
     </PLCodeBlock>
   </PLWrapper>
@@ -111,12 +111,12 @@ const FormInline = () => (
   <PLWrapper>
     <PLHeading text="Form inline" />
     <PLExample>
-      <input type="email" placeholder="Email" className="f__control f__control_inline" id="email" />
+      <input className="f__control f__control_inline" />
       <button className="btn btn_primary">Register</button>
     </PLExample>
     <PLCodeBlock>
       {`
-        <input type="email" placeholder="Email" className="f__control f__control_inline" id="email" />
+        <input className="f__control f__control_inline" />
         <button className="btn btn_primary">Register</button>
       `}
     </PLCodeBlock>

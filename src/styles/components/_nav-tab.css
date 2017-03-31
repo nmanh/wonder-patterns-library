@@ -13,10 +13,7 @@
     text-align: center;
 
     border: 2px solid $muted;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
+    border-color: transparent;
 
     &.active {
       border-top-color: $color-primary;
@@ -40,7 +37,7 @@
 
   &__link {
     display: block;
-    padding: $space-sm;
+    padding: $space-sm 0;
 
     font-weight: $font-weight-normal;
     color: $body-color;

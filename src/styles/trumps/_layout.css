@@ -2,6 +2,7 @@
 
 .lf {
   display: flex;
+  flex-wrap: wrap;
 
   &_full-space {
     flex-grow: 1;
