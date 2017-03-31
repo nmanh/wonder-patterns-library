@@ -50,16 +50,16 @@ export const Header = ({ openAskModal }) => (
       <div className="row column">
         <nav className="nav">
           <a href="#" className="nav__link active">
-            <i className="fa fa-home" /> Trang chủ
+            <i className="fa fa-home" /> <span className="hide-for-small">Trang chủ</span>
           </a>
           <a href="#" className="nav__link">
-            <i className="fa fa-comments" /> Blog
+            <i className="fa fa-comments" /> <span className="hide-for-small">Blog</span>
           </a>
           <a href="#" className="nav__link">
-            <i className="fa fa-camera" /> Live session
+            <i className="fa fa-camera" /> <span className="hide-for-small">Live session</span>
           </a>
           <a href="#" className="nav__link">
-            <i className="fa fa-edit" /> Learn center
+            <i className="fa fa-edit" /> <span className="hide-for-small">Learn center</span>
           </a>
         </nav>
       </div>

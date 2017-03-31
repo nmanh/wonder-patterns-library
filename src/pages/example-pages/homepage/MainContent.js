@@ -10,13 +10,15 @@ const PostHasAnswer = ({ openAnswerModal }) => (
     <div>
       {/* Tags */}
       <div className="lf lf_align-middle mbmd">
-        <button className="btn btn_primary mrsm">Kỹ năng nghe</button>
-        <button className="btn btn_primary mrlg">IELTS 5.0</button>
-        <ul className="lf_full-space list-inline txt-muted">
+        <div className="mrlg">
+          <button className="btn btn_primary mrsm mbxs">Kỹ năng nghe</button>
+          <button className="btn btn_primary mrsm mbxs">IELTS 5.0</button>
+        </div>
+        <ul className="lf_full-space list-inline txt-muted mbxs">
           <li>1 trả lời</li>
           <li>18 lượt xem</li>
         </ul>
-        <button className="btn btn_special">Q&A</button>
+        <button className="btn btn_special mbxs">Q&A</button>
       </div>
     </div>
 
@@ -82,13 +84,15 @@ const PostNoAnswer = () => (
     <div>
       {/* Tags */}
       <div className="lf lf_align-middle mbmd">
-        <button className="btn btn_primary mrsm">Kỹ năng nghe</button>
-        <button className="btn btn_primary mrlg">IELTS 5.0</button>
-        <ul className="lf_full-space list-inline txt-muted">
+        <div className="mrlg">
+          <button className="btn btn_primary mrsm mbxs">Kỹ năng nghe</button>
+          <button className="btn btn_primary mrsm mbxs">IELTS 5.0</button>
+        </div>
+        <ul className="lf_full-space list-inline txt-muted mbxs">
           <li>1 trả lời</li>
           <li>18 lượt xem</li>
         </ul>
-        <button className="btn btn_special">Q&A</button>
+        <button className="btn btn_special mbxs">Q&A</button>
       </div>
     </div>
 
