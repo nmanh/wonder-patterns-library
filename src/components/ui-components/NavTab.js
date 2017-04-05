@@ -62,7 +62,7 @@ class Example extends React.Component {
                 key={item.name}
                 role="presentation"
                 className={item.isActive ? 'nav-tab__item active' : 'nav-tab__item'}
-                onMouseDown={this.setTabActive}
+                onClick={this.setTabActive}
               >
                 <a
                   href="#"

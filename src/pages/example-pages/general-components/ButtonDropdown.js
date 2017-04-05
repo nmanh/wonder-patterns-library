@@ -22,25 +22,34 @@ export class ButtonDropdown extends React.Component {
 
   render() {
     return (
-      <div className="btn-dropdown">
+      <div
+        className="btn-dropdown"
+      >
         <button
-          className="btn btn_reset"
-          onMouseDown={this.toggleMenu}
+          onClick={this.toggleMenu}
           onBlur={this.hideMenu}
+          className="btn btn_reset"
         >
           <i className="fa fa-ellipsis-h fa-2x txt-primary-color" />
         </button>
-        <ul className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
-          <li className="btn-dropdown__menu-item">
-            <a href="#"><i className="fa fa-bookmark-o"></i> Bookmark</a>
-          </li>
-          <li className="btn-dropdown__menu-item">
-            <a href="#"><i className="fa fa-pencil"></i> Edit</a>
-          </li>
-          <li className="btn-dropdown__menu-item">
-            <a href="#"><i className="fa fa-trash"></i> Delete</a>
-          </li>
-        </ul>
+        <div className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
+          <ul className="list-unstyled">
+            <li className="btn-dropdown__menu-item">
+              <a
+                href="#"
+                onClick={() => {
+                  console.log('click Bookmark');
+                }}
+              ><i className="fa fa-bookmark-o"></i> Bookmark</a>
+            </li>
+            <li className="btn-dropdown__menu-item">
+              <a href="#"><i className="fa fa-pencil"></i> Edit</a>
+            </li>
+            <li className="btn-dropdown__menu-item">
+              <a href="#"><i className="fa fa-trash"></i> Delete</a>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }

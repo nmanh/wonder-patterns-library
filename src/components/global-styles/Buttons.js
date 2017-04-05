@@ -36,7 +36,8 @@ const Options = () => (
       <button className="btn btn_info mbsm mrsm">Info</button>
       <button className="btn btn_warning mbsm mrsm">Warning</button>
       <button className="btn btn_danger mbsm mrsm">Danger</button>
-      <button className="btn btn_special mbsm">Special</button>
+      <button className="btn btn_special mbsm mrsm">Special</button>
+      <button className="btn btn_warning-bordered mbsm">Warning bordered</button>
     </PLExample>
     <PLCodeBlock>
       {`
@@ -46,6 +47,7 @@ const Options = () => (
         <button className="btn btn_warning">Warning</button>
         <button className="btn btn_danger">Danger</button>
         <button className="btn btn_special">Special</button>
+        <button className="btn btn_warning-bordered">Warning bordered</button>
       `}
     </PLCodeBlock>
   </PLWrapper>
@@ -127,10 +129,13 @@ class ButtonDropdown extends React.Component {
   }
 
   toggleMenu() {
+    console.log('toggle menu');
+    this.menu.focus();
     this.setState({ isMenuOpen: !this.state.isMenuOpen });
   }
 
   hideMenu() {
+    console.log('hide menu');
     this.setState({ isMenuOpen: false });
   }
 
@@ -142,25 +147,44 @@ class ButtonDropdown extends React.Component {
           <div className="btn-dropdown">
             <button
               className="btn btn-dropdown__btn"
-              onMouseDown={this.toggleMenu}
+              onClick={this.toggleMenu}
               onBlur={this.hideMenu}
             >
               Button <i className="fa fa-caret-down"></i>
             </button>
-            <ul className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
-              <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-pencil"></i> Edit</a></li>
-              <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-trash"></i> Delete</a></li>
-            </ul>
+            <div
+              className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}
+              ref={(ref) => this.menu = ref}
+              onFocus={() => {
+                console.log('menu focus');
+              }}
+            >
+              <ul className="list-unstyled">
+                <li className="btn-dropdown__menu-item">
+                  <a
+                    href="#"
+                    onClick={() => {
+                      console.log('click bookmark');
+                    }}
+                  ><i className="fa fa-pencil"></i> Edit</a>
+                </li>
+                <li className="btn-dropdown__menu-item">
+                  <a href="#"><i className="fa fa-trash"></i> Delete</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </PLExample>
         <PLCodeBlock>
           {`
             <div className="btn-dropdown">
               <button className="btn btn-dropdown__btn">Button<i className="fa fa-caret-down"></i></button>
-              <ul className="btn-dropdown__menu">
-                <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-pencil"></i> Edit</a></li>
-                <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-trash"></i> Delete</a></li>
-              </ul>
+              <div className="btn-dropdown__menu">
+                <ul className="list-unstyled">
+                  <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-pencil"></i> Edit</a></li>
+                  <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-trash"></i> Delete</a></li>
+                </ul>
+              </div>
             </div>
           `}
         </PLCodeBlock>

@@ -49,7 +49,7 @@ $link-color: $color-primary;
 $muted: $silver;
 
 /* 3. Typography */
-$font-sans-serif: "Source Sans Pro", sans-serif;
+$font-sans-serif: "Roboto", sans-serif;
 // $font-serif: Bitter, serif;
 $font-special: Damion, cursive; /* This is optional, remove if nessesary */
 
@@ -82,7 +82,7 @@ $space-xxlg: ($base * 6);
 @custom-media --large-up (min-width: 1024px);
 
 /* 6. Border */
-$radius: 4px;
+$radius: 3px;
 $radius-big: $base;
 $border-color: $silver;
 

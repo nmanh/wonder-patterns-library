@@ -11,8 +11,4 @@
   &_align-middle {
     align-items: center;
   }
-
-  &_wrap {
-    flex-wrap: wrap;
-  }
 }

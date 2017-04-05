@@ -22,7 +22,7 @@ export const Header = ({ openAskModal }) => (
           </div>
           <div
             className="medium-4 columns"
-            onMouseDown={openAskModal}
+            onClick={openAskModal}
           >
             <button className="btn btn_warning btn_large shadow txt-uppercase">Hỏi</button>
           </div>

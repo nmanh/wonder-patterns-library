@@ -83,3 +83,8 @@
 .pt-example {
   padding: 32px 16px;
 }
+
+.pt-description {
+  padding: 32px 16px;
+  border-bottom: 2px solid $muted;
+}

@@ -9,7 +9,7 @@ class ModalFooter extends React.Component {
       <div className="pull-right">
         <button
           className="btn mrmd"
-          onMouseDown={this.props.onRequestClose}
+          onClick={this.props.onRequestClose}
         >Huỷ</button>
         <button className="btn btn_primary">Đặt câu hỏi</button>
       </div>

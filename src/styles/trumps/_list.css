@@ -2,19 +2,23 @@
   @include reset-default-list-style;
 }
 
-.list-border-bottom {
-
-  li:not(:last-child) { /* stylelint-disable-line */
-    border-bottom: 1px solid $muted;
+.list-inline {
+  li { /* stylelint-disable-line */
+    display: inline-block;
+    margin-right: $space-md;
   }
 
   @include reset-default-list-style;
 }
 
-.list-inline {
+.list-underline {
+
   li { /* stylelint-disable-line */
-    display: inline-block;
-    margin-right: $space-md;
+    padding: $space-sm $space-md;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $muted;
+    }
   }
 
   @include reset-default-list-style;

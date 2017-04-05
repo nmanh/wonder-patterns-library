@@ -4,22 +4,30 @@
   border-radius: $radius;
 
   &__content {
-    display: flex;
-    align-items: center;
+    display: block;
+    // align-items: center;
     padding: $space-sm 0;
   }
 
   &__head {
-    size: ($base * 5);
-    margin-right: $space-sm;
+    display: table-cell;
+    // size: ($base * 5);
+    padding-right: $space-sm;
+    vertical-align: top;
 
     &_small {
       size: ($base * 3);
     }
+
+    > img { /* stylelint-disable-line */
+      max-width: none;
+    }
   }
 
   &__body {
-    flex-grow: 1;
+    // flex-grow: 1;
+    display: table-cell;
+    vertical-align: top;
   }
 
   &__addon {

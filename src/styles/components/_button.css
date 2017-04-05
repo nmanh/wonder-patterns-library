@@ -6,7 +6,7 @@
   color: $body-color;
   text-align: center;
   white-space: nowrap;
-  // vertical-align: bottom;
+  vertical-align: middle;
 
   cursor: pointer;
   background-color: $white;
@@ -49,6 +49,19 @@
     }
   }
 
+  &_warning-bordered {
+    color: $color-warning;
+
+    border: 2px solid $color-warning;
+    border-radius: $radius;
+
+    &:hover {
+      color: $white;
+
+      background-color: $color-warning;
+    }
+  }
+
   &_large {
     padding: $space-sm $space-xlg;
   }
@@ -66,6 +79,7 @@
 
   &_reset {
     padding: 0;
+    background-color: transparent;
     border: 0;
 
     &:hover,
@@ -116,6 +130,7 @@
     position: absolute;
     top: 100%;
     right: 0;
+    z-index: $z-index-10;
 
     min-width: $btn-group-dropdown-menu;
     padding: 0;
@@ -140,9 +155,16 @@
   &__menu-item {
     list-style: none;
 
-    > a { /* stylelint-disable-line */
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $muted;
+    }
+
+    > a, button { /* stylelint-disable-line */
       display: block;
+      width: 100%;
       padding: $space-sm $space-md;
+
+      text-align: left;
     }
   }
 }

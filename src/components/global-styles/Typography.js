@@ -5,18 +5,27 @@ import {
   PLHeading,
   PLCodeBlock,
   PLExample,
+  PLDescription,
 } from '../patterns-library';
 
 const Heading = () => (
   <PLWrapper>
     <PLHeading text="Heading" />
+    <PLDescription>
+      <div>
+        Type scale: 1.25 (Major Third) - <a href="http://type-scale.com/" target="_blank">type-scale.com</a>
+      </div>
+      <div>
+        16px = 1rem
+      </div>
+    </PLDescription>
     <PLExample>
-      <h1>h1 I will recommend Ooooh to everyone I know!</h1>
-      <h2>h2 I will recommend Ooooh to everyone I know!</h2>
-      <h3>h3 I will recommend Ooooh to everyone I know!</h3>
-      <h4>h4 I will recommend Ooooh to everyone I know!</h4>
-      <h5>h5 I will recommend Ooooh to everyone I know!</h5>
-      <h6>h6 I will recommend Ooooh to everyone I know!</h6>
+      <h1>h1 I will recommend Ooooh to everyone I know! - 2.441rem</h1>
+      <h2>h2 I will recommend Ooooh to everyone I know! - 1.953rem</h2>
+      <h3>h3 I will recommend Ooooh to everyone I know! - 1.563rem</h3>
+      <h4>h4 I will recommend Ooooh to everyone I know! - 1.25rem</h4>
+      <h5>h5 I will recommend Ooooh to everyone I know! - 1rem</h5>
+      <h6>h6 I will recommend Ooooh to everyone I know! - 0.8rem</h6>
     </PLExample>
     <PLCodeBlock>
       {`

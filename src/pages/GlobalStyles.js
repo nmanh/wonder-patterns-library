@@ -7,6 +7,7 @@ import {
   Typography,
   Buttons,
   Form,
+  Overview,
 } from '../components/global-styles';
 import { PLSubNav } from '../components/patterns-library';
 
@@ -47,9 +48,7 @@ class GlobalStyles extends React.Component {
           <Route path={`${match.url}/typography`} component={Typography} />
           <Route path={`${match.url}/buttons`} component={Buttons} />
           <Route path={`${match.url}/form`} component={Form} />
-          <Route path={match.url} render={() => (
-            <h2>Overview</h2>
-          )} />
+          <Route path={match.url} component={Overview} />
         </Switch>
       </div>
     )

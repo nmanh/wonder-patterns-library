@@ -5,7 +5,7 @@ export const ModalHeader = ({ onRequestClose, title }) => (
     <h3 className="modal__title">{title}</h3>
     <button
       className="modal__btn-close"
-      onMouseDown={onRequestClose}
+      onClick={onRequestClose}
     >
       <i className="fa fa-times"></i>
     </button>
@@ -76,12 +76,12 @@ export class Modal extends React.Component {
         tabIndex="-1"
         role="dialog"
         ref={(ref) => this.modal = ref}
-        onMouseDown={onRequestClose}
+        onClick={onRequestClose}
       >
         <div
           className="modal__dialog"
           role="document"
-          onMouseDown={(e) => e.stopPropagation()}
+          onClick={(e) => e.stopPropagation()}
         >
           <div className="modal__content fade-in-down">
 

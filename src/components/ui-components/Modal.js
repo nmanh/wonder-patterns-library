@@ -110,12 +110,12 @@ class LiveDemo extends React.Component {
             tabIndex="-1"
             role="dialog"
             ref={(ref) => {this.modal = ref}}
-            onMouseDown={this.hideModal}
+            onClick={this.hideModal}
           >
             <div
               className="modal__dialog"
               role="document"
-              onMouseDown={(e) => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             >
               <div className="modal__content fade-in-down">
                 <div className="modal__header">
@@ -123,7 +123,7 @@ class LiveDemo extends React.Component {
 
                   <button
                     className="modal__btn-close"
-                    onMouseDown={this.hideModal}
+                    onClick={this.hideModal}
                   >
                     <i className="fa fa-times"></i>
                   </button>
@@ -137,7 +137,7 @@ class LiveDemo extends React.Component {
                 </div>
                 <div className="modal__footer">
                   <div className="pull-right">
-                    <button className="btn mrmd" onMouseDown={this.hideModal}>Close</button>
+                    <button className="btn mrmd" onClick={this.hideModal}>Close</button>
                     <button className="btn btn_primary">Save changes</button>
                   </div>
                 </div>

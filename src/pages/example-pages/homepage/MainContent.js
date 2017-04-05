@@ -53,7 +53,7 @@ const PostHasAnswer = ({ openAnswerModal }) => (
     <div className="mbmd">
       <a
         href="#"
-        onMouseDown={(evt) => {
+        onClick={(evt) => {
           evt.preventDefault();
           openAnswerModal();
         }}>
@@ -175,14 +175,14 @@ class LiveSession extends React.Component {
           <button
             className="carousel__narrow carousel__narrow_prev"
             ref={(ref) => this.narrowPrev = ref}
-            onMouseDown={this.goToPrevSlide}
+            onClick={this.goToPrevSlide}
           >
             <i className="fa fa-chevron-left fa-lg" />
           </button>
           <button
             className="carousel__narrow carousel__narrow_next"
             ref={(ref) => this.narrowNext = ref}
-            onMouseDown={this.goToNextSlide}
+            onClick={this.goToNextSlide}
           >
             <i className="fa fa-chevron-right fa-lg" />
           </button>
