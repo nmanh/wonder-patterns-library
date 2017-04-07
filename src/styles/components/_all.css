@@ -8,8 +8,10 @@
 @import "switch";
 @import "section-header";
 @import "nav-tab";
+@import "nav-tab-v";
 @import "nav";
 @import "carousel";
 @import "divider";
 @import "loader";
 @import "badge";
+@import "frame";

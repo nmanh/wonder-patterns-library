@@ -11,4 +11,14 @@
   &_align-middle {
     align-items: center;
   }
+
+  &_no-wrap {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Clearfix */
+
+.clearfix {
+  clear: fix;
 }

@@ -5,3 +5,5 @@ export { NavTab } from './NavTab';
 export { Nav } from './Nav';
 export { Divider } from './Divider';
 export { Badge } from './Badge';
+export { Frame } from './Frame';
+export { NavTabV } from './NavTabV';

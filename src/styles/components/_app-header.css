@@ -7,18 +7,19 @@
   }
 
   &__main {
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // left: 0;
-    // z-index: $z-index-10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $z-index-10;
 
     padding: $space-lg 0 0;
 
-    background-image: linear-gradient(to bottom, darken($color-primary, 20%), $color-primary);
+    // background-image: linear-gradient(to bottom, darken($color-primary, 20%), $color-primary);
+    background-color: $color-primary;
   }
 
-  // &__ghost {
-  //   height: 70px;
-  // }
+  &__ghost {
+    height: 161px;
+  }
 }

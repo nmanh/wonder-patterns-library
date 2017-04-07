@@ -192,6 +192,81 @@ class LiveSession extends React.Component {
   }
 }
 
+class QuizTest extends React.Component {
+  constructor() {
+    super();
+
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+  }
+
+  componentDidMount() {
+    // initial carousel
+    $(this.slider).slick({
+      slidesToShow: 3,
+      centerPadding: '16px',
+      infinite: false,
+      arrows: false,
+    });
+  }
+
+  goToPrevSlide() {
+    $(this.slider).slick('slickPrev');
+  }
+
+  goToNextSlide() {
+    $(this.slider).slick('slickNext');
+  }
+
+  render() {
+    return (
+      <div className="mbxlg">
+        <div className="lf lf_align-middle mbmd">
+          <div className="lf_full-space">
+            <img src="https://unsplash.it/40" className="img-circle mrmd" alt="" />
+            <span className="txt-large">Suggessted by Wonder</span>
+          </div>
+          <button className="btn btn_special">Quiz/Test</button>
+        </div>
+
+        <div className="carousel">
+          <div ref={(ref) => this.slider = ref}>
+            {[1, 2, 3, 4, 5, 6].map(item => (
+              <div className="panel txt-center mlsm mrsm" key={item}>
+                <div className="panel__heading">
+                  <h3 className="panel__title">Quiz Test</h3>
+                </div>
+                <div className="panel__body">
+                  <p>
+                    Vocabulary
+                    <br />
+                    SAT Words
+                  </p>
+                  <button className="btn btn_warning">Take Quiz</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button
+            className="carousel__narrow carousel__narrow_prev"
+            ref={(ref) => this.narrowPrev = ref}
+            onClick={this.goToPrevSlide}
+          >
+            <i className="fa fa-chevron-left fa-lg" />
+          </button>
+          <button
+            className="carousel__narrow carousel__narrow_next"
+            ref={(ref) => this.narrowNext = ref}
+            onClick={this.goToNextSlide}
+          >
+            <i className="fa fa-chevron-right fa-lg" />
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
+
 const Divider = () => (
   <div className="divider mbxlg" />
 );
@@ -233,6 +308,12 @@ export const MainContent = ({ openAnswerModal, openAskModal }) => (
     <Divider />
 
     <PostHasAnswer openAnswerModal={openAnswerModal} />
+    <Divider />
+
+    <PostNoAnswer />
+    <Divider />
+
+    <QuizTest />
     <Divider />
 
     <PostNoAnswer />

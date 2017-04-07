@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Header = ({ openAskModal }) => (
   <header className="app-header mbxxlg">
-    <div className="app-header__main">
+    <div className="app-header__main" style={{top: '38px'}}>
 
       <div className="row column lf lf_align-middle mblg">
 
@@ -59,7 +59,10 @@ export const Header = ({ openAskModal }) => (
             <i className="fa fa-camera" /> <span className="hide-for-small">Live session</span>
           </a>
           <a href="#" className="nav__link">
-            <i className="fa fa-edit" /> <span className="hide-for-small">Learn center</span>
+            <i className="fa fa-edit" /> <span className="hide-for-small">Vocab</span>
+          </a>
+          <a href="#" className="nav__link">
+            <i className="fa fa-question-circle" /> <span className="hide-for-small">Quiz/Test</span>
           </a>
         </nav>
       </div>

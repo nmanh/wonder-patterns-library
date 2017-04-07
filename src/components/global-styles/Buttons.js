@@ -128,14 +128,12 @@ class ButtonDropdown extends React.Component {
     this.hideMenu = this.hideMenu.bind(this);
   }
 
-  toggleMenu() {
-    console.log('toggle menu');
-    this.menu.focus();
+  toggleMenu(e) {
+    e.preventDefault();
     this.setState({ isMenuOpen: !this.state.isMenuOpen });
   }
 
   hideMenu() {
-    console.log('hide menu');
     this.setState({ isMenuOpen: false });
   }
 
@@ -144,48 +142,70 @@ class ButtonDropdown extends React.Component {
       <PLWrapper>
         <PLHeading text="Button Dropdown" />
         <PLExample>
-          <div className="btn-dropdown">
-            <button
-              className="btn btn-dropdown__btn"
-              onClick={this.toggleMenu}
-              onBlur={this.hideMenu}
-            >
+          <a
+            href="#"
+            className="btn-dropdown"
+            onClick={this.toggleMenu}
+            onBlur={this.hideMenu}
+          >
+            <div className="btn btn-dropdown__btn">
               Button <i className="fa fa-caret-down"></i>
-            </button>
-            <div
-              className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}
-              ref={(ref) => this.menu = ref}
-              onFocus={() => {
-                console.log('menu focus');
-              }}
-            >
+            </div>
+            <div className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
               <ul className="list-unstyled">
                 <li className="btn-dropdown__menu-item">
-                  <a
-                    href="#"
-                    onClick={() => {
-                      console.log('click bookmark');
+                  <button
+                    className="btn btn_reset"
+                    onMouseDown={(e) => {
+                      e.preventDefault();
                     }}
-                  ><i className="fa fa-pencil"></i> Edit</a>
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      e.preventDefault();
+                    }}
+                  >
+                    <i className="fa fa-pencil"></i> Edit
+                  </button>
                 </li>
                 <li className="btn-dropdown__menu-item">
-                  <a href="#"><i className="fa fa-trash"></i> Delete</a>
+                  <button
+                    className="btn btn_reset"
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                    }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      e.preventDefault();
+                    }}
+                  >
+                    <i className="fa fa-trash"></i> Delete
+                  </button>
                 </li>
               </ul>
             </div>
-          </div>
+          </a>
         </PLExample>
         <PLCodeBlock>
           {`
-            <div className="btn-dropdown">
-              <button className="btn btn-dropdown__btn">Button<i className="fa fa-caret-down"></i></button>
+            <a href="#" className="btn-dropdown">
+              <div className="btn btn-dropdown__btn">
+                Button <i className="fa fa-caret-down"></i>
+              </div>
               <div className="btn-dropdown__menu">
                 <ul className="list-unstyled">
-                  <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-pencil"></i> Edit</a></li>
-                  <li className="btn-dropdown__menu-item"><a href="#"><i className="fa fa-trash"></i> Delete</a></li>
+                  <li className="btn-dropdown__menu-item">
+                    <button className="btn btn_reset">
+                      <i className="fa fa-pencil"></i> Edit
+                    </button>
+                  </li>
+                  <li className="btn-dropdown__menu-item">
+                    <button className="btn btn_reset">
+                      <i className="fa fa-trash"></i> Delete
+                    </button>
+                  </li>
                 </ul>
               </div>
-            </div>
+            </a>
           `}
         </PLCodeBlock>
       </PLWrapper>

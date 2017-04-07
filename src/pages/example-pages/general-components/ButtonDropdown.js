@@ -12,7 +12,8 @@ export class ButtonDropdown extends React.Component {
     this.hideMenu = this.hideMenu.bind(this);
   }
 
-  toggleMenu() {
+  toggleMenu(e) {
+    e.preventDefault();
     this.setState({ isMenuOpen: !this.state.isMenuOpen });
   }
 
@@ -22,35 +23,62 @@ export class ButtonDropdown extends React.Component {
 
   render() {
     return (
-      <div
+      <a
+        href="#"
         className="btn-dropdown"
+        onClick={this.toggleMenu}
+        onBlur={this.hideMenu}
       >
-        <button
-          onClick={this.toggleMenu}
-          onBlur={this.hideMenu}
-          className="btn btn_reset"
-        >
+        <div className="btn btn_reset">
           <i className="fa fa-ellipsis-h fa-2x txt-primary-color" />
-        </button>
+        </div>
         <div className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
           <ul className="list-unstyled">
             <li className="btn-dropdown__menu-item">
-              <a
-                href="#"
-                onClick={() => {
-                  console.log('click Bookmark');
+              <button
+                className="btn btn_reset"
+                onMouseDown={(e) => {
+                  e.preventDefault();
                 }}
-              ><i className="fa fa-bookmark-o"></i> Bookmark</a>
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                }}
+              >
+                <i className="fa fa-bookmark-o"></i> Bookmark
+              </button>
             </li>
             <li className="btn-dropdown__menu-item">
-              <a href="#"><i className="fa fa-pencil"></i> Edit</a>
+              <button
+                className="btn btn_reset"
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                }}
+              >
+                <i className="fa fa-pencil"></i> Edit
+              </button>
             </li>
             <li className="btn-dropdown__menu-item">
-              <a href="#"><i className="fa fa-trash"></i> Delete</a>
+              <button
+                className="btn btn_reset"
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                }}
+              >
+                <i className="fa fa-trash"></i> Delete
+              </button>
             </li>
           </ul>
         </div>
-      </div>
+      </a>
     );
   }
 }

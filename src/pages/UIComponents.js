@@ -8,9 +8,11 @@ import {
   Panel,
   Modal,
   NavTab,
+  NavTabV,
   Nav,
   Divider,
   Badge,
+  Frame
 } from '../components/ui-components';
 import { PLSubNav } from '../components/patterns-library';
 
@@ -40,6 +42,10 @@ class UIComponents extends React.Component {
           url: `${props.match.url}/nav-tab`,
         },
         {
+          name: 'Nav Tab Vertical',
+          url: `${props.match.url}/nav-tab-v`,
+        },
+        {
           name: 'Nav',
           url: `${props.match.url}/nav`,
         },
@@ -50,6 +56,10 @@ class UIComponents extends React.Component {
         {
           name: 'Badge',
           url: `${props.match.url}/badge`,
+        },
+        {
+          name: 'Frame',
+          url: `${props.match.url}/frame`,
         },
       ]
     }
@@ -66,9 +76,11 @@ class UIComponents extends React.Component {
           <Route path={`${match.url}/panel`} component={Panel} />
           <Route path={`${match.url}/modal`} component={Modal} />
           <Route path={`${match.url}/nav-tab`} component={NavTab} />
+          <Route path={`${match.url}/nav-tab-v`} component={NavTabV} />
           <Route path={`${match.url}/nav`} component={Nav} />
           <Route path={`${match.url}/divider`} component={Divider} />
           <Route path={`${match.url}/badge`} component={Badge} />
+          <Route path={`${match.url}/frame`} component={Frame} />
           <Route path={match.url} render={() => (
             <h2>Overview</h2>
           )} />

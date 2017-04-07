@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import GlobalStyles from './pages/GlobalStyles';
 import UIComponents from './pages/UIComponents';
 import CSSUtilities from './pages/CSSUtilities';
-import HomePage from './pages/example-pages/homepage';
+import ExamplePages from './pages/example-pages';
 import './assets/styles/main.css';
 
 class App extends Component {
@@ -30,7 +30,7 @@ class App extends Component {
               <Link to="/css-utilities" className="pt-main-nav__link">CSS Utilities</Link>
             </li>
             <li className="pt-main-nav__item">
-              <Link to="/pages/homepage" className="pt-main-nav__link">Homepage</Link>
+              <Link to="/example-pages" className="pt-main-nav__link">Example Pages</Link>
             </li>
           </ul>
 
@@ -43,7 +43,7 @@ class App extends Component {
             </div>
           </div>
 
-          <Route path="/pages/homepage" component={HomePage}/>
+          <Route path="/example-pages" component={ExamplePages}/>
 
         </div>
       </Router>

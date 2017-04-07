@@ -1,4 +1,7 @@
 /* stylelint-disable */
+.mb-reset {
+  margin-bottom: 0;
+}
 
 // margin and padding values array
 $space-values : (
