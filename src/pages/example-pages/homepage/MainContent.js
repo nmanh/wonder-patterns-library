@@ -242,7 +242,7 @@ class QuizTest extends React.Component {
                     <br />
                     SAT Words
                   </p>
-                  <button className="btn btn_warning">Take Quiz</button>
+                  <button className="btn btn_warning-bordered">Take Quiz</button>
                 </div>
               </div>
             ))}

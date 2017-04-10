@@ -22,7 +22,7 @@ class Example extends React.Component {
                 <i className="fa fa-comments" /> Blog
               </a>
               <a href="#" className="nav__link">
-                <i className="fa fa-camera" /> Live session
+                <i className="fa fa-video-camera" /> Live session
               </a>
               <a href="#" className="nav__link">
                 <i className="fa fa-edit" /> Learn center
