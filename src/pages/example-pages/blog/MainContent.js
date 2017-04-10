@@ -20,7 +20,7 @@ const BlogHasThumbnail = () => (
       {/* Blog thumbnail */}
       <div className="mbmd">
         <a href="#">
-          <img src="https://unsplash.it/800/450" className="img-rounded" alt="" />
+          <img src="https://unsplash.it/800/450" className="img-rounded img-full-width" alt="" />
         </a>
       </div>
 

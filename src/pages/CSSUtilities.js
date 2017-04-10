@@ -48,12 +48,17 @@ const Image = () => (
           <div>Image rounded</div>
           <img src="https://unsplash.it/100" className="img-rounded" alt="presentation" />
         </div>
+        <div className="mbmd small-12 columns">
+          <div>Image full width</div>
+          <img src="https://unsplash.it/800/450" className="img-full-width" alt="presentation" />
+        </div>
       </div>
     </PLExample>
     <PLCodeBlock>
       {`
         <img className="img-circle" />
         <img className="img-rounded" />
+        <img className="img-full-width" />
       `}
     </PLCodeBlock>
   </PLWrapper>
