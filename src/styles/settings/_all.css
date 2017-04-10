@@ -36,13 +36,13 @@ $highland: #769365;
 $hot-cinnamon: #e36928;
 
 /* new color scheme */
-$color-primary: $highland;
-// $color-primary: #079e6b;
+// $color-primary: $highland;
+$color-primary: #079e6b;
 $color-secondary: $mine-shaft;
 $color-info: $blue-jeans;
 $color-success: $android-green;
-$color-warning: $hot-cinnamon;
-// $color-warning: #ff8e2d;
+// $color-warning: $hot-cinnamon;
+$color-warning: #ff8e2d;
 $color-danger: $flame;
 
 $body-bg: $white;
