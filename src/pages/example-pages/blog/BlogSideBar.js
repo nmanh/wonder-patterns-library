@@ -83,11 +83,6 @@ class BlogSideBar extends React.Component {
     return (
       <aside>
         <div className="mblg">
-          <button className="btn btn_warning-bordered btn_large">
-            <i className="fa fa-plus" /> Create Blog
-          </button>
-        </div>
-        <div className="mblg">
           <button className="btn btn_warning btn_large">
             <i className="fa fa-plus" /> Create Blog
           </button>

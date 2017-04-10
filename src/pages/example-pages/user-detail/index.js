@@ -50,7 +50,7 @@ class UserDetail extends React.Component {
       <div>
         <Header />
         <div className="row">
-          <div className="medium-3 columns mblg">
+          <div className="small-8 small-offset-2 medium-offset-0 medium-3 columns mblg">
             <div className="txt-center">
               <img src="https://unsplash.it/300" className="img-circle" alt="" />
             </div>
