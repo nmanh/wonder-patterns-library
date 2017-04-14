@@ -168,3 +168,25 @@
     }
   }
 }
+
+.btn-split {
+
+  &__addon {
+    position: relative;
+
+    padding-right: $space-sm;
+    padding-left: $space-sm;
+
+    &::before {
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -2px;
+      width: 2px;
+
+      content: "";
+
+      background-color: rgba($body-color, 0.3);
+    }
+  }
+}

@@ -42,7 +42,32 @@ export const NavTabV = () => (
       </PLExample>
       <PLCodeBlock>
         {`
-          <div className="divider" />
+          <ul className="nav-tab-v">
+            <li className="nav-tab-v__item active">
+              <a href="#" className="nav-tab-v__link">
+                <span className="nav-tab-v__text">Text text text</span>
+                <span className="nav-tab-v__addon">32</span>
+              </a>
+            </li>
+            <li className="nav-tab-v__item">
+              <a href="#" className="nav-tab-v__link">
+                <span className="nav-tab-v__text">Text text text</span>
+                <span className="nav-tab-v__addon">32</span>
+              </a>
+            </li>
+            <li className="nav-tab-v__item">
+              <a href="#" className="nav-tab-v__link">
+                <span className="nav-tab-v__text">Text text text</span>
+                <span className="nav-tab-v__addon">32</span>
+              </a>
+            </li>
+            <li className="nav-tab-v__item">
+              <a href="#" className="nav-tab-v__link">
+                <span className="nav-tab-v__text">Text text text</span>
+                <span className="nav-tab-v__addon">32</span>
+              </a>
+            </li>
+          </ul>
         `}
       </PLCodeBlock>
     </PLWrapper>

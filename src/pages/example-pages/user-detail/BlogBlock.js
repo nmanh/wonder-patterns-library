@@ -151,7 +151,7 @@ class BlogBlock extends React.Component {
       <div>
         <div className="lf lf_align-middle mtlg mblg">
           <h3 className="mrmd mb-reset">My Blog</h3>
-          <button className="btn btn_warning-bordered">
+          <button className="btn btn_warning">
             <i className="fa fa-plus" /> Create blog
           </button>
         </div>

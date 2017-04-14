@@ -15,6 +15,13 @@
   &_no-wrap {
     flex-wrap: nowrap;
   }
+
+  /* no grow and shrink */
+
+  &_no-gas {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 }
 
 /* Clearfix */

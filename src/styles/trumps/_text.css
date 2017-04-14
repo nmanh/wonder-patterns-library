@@ -47,3 +47,9 @@
 .txt-uppercase {
   text-transform: uppercase;
 }
+
+/* Font weight */
+
+.txt-fw-normal {
+  font-weight: $font-weight-base;
+}

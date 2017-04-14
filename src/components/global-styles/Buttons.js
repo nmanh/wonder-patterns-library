@@ -117,6 +117,30 @@ const Disable = () => (
   </PLWrapper>
 );
 
+const ButtonSplit = () => (
+  <PLWrapper>
+    <PLHeading text="Button split" />
+    <PLExample>
+      <div className="btn-split">
+        <button className="btn btn_primary br-r-tr-br">Button text</button>
+        <button className="btn btn_primary btn-split__addon br-r-tl-bl">
+          <i className="fa fa-search" />
+        </button>
+      </div>
+    </PLExample>
+    <PLCodeBlock>
+      {`
+        <div className="btn-split">
+          <button className="btn btn_primary br-r-tr-br">Button text</button>
+          <button className="btn btn_primary btn-split__addon br-r-tl-bl">
+            <i className="fa fa-search" />
+          </button>
+        </div>
+      `}
+    </PLCodeBlock>
+  </PLWrapper>
+);
+
 class ButtonDropdown extends React.Component {
   constructor() {
     super();
@@ -222,5 +246,6 @@ export const Buttons = () => (
     <Active />
     <Disable />
     <ButtonDropdown />
+    <ButtonSplit />
   </div>
 );

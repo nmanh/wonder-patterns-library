@@ -8,10 +8,21 @@ export const Header = ({ openAskModal }) => (
       <div className="row column lf lf_align-middle mblg">
 
         <Link to="/example-pages/homepage" className="app-header__logo mrmd">
-          <h1 className="mb-reset">Wonder</h1>
+          <h1 className="mb-reset hide-for-small">Wonder</h1>
+          <h1 className="mb-reset hide-for-medium">W</h1>
         </Link>
 
         <div className="row lf_full-space mrlg">
+          {/* <button className="btn btn_warning btn_large shadow mrmd">
+            <i className="fa fa-search" />
+          </button>
+          <button
+            className="btn btn_warning btn_large shadow"
+            onClick={openAskModal}
+          >
+            <i className="fa fa-question-circle" />
+          </button> */}
+
           <div className="medium-8 columns">
             <form className="f">
               <input
@@ -39,7 +50,7 @@ export const Header = ({ openAskModal }) => (
         <div>
           <Link to="/example-pages/user-detail" className="lf lf_align-middle txt-white">
             <img src="https://unsplash.it/40" className="img-circle mrsm" alt="avatar" />
-            <div>
+            <div className="hide-for-small">
               <span className="mrsm">Linh duong</span>
               <i className="fa fa-angle-down"></i>
             </div>

@@ -36,12 +36,18 @@
       float: left;
     }
 
-    /* input group */
+    /* input size */
 
     &_large {
       height: auto;
       padding-top: $space-sm;
       padding-bottom: $space-sm;
+    }
+
+    /* input width */
+
+    &_width-auto {
+      width: auto;
     }
   }
 
