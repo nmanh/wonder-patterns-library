@@ -3,13 +3,17 @@
   z-index: $z-index-max;
 
   display: none;
-  padding: 0 $space-md;
   overflow-x: hidden;
   overflow-y: auto;
 
-  background-color: rgba($body-color, 0.7);
+  background-color: $white;
   opacity: 0;
   transition: opacity $transition-time;
+
+  @media (--medium-up) {
+    padding: 0 $space-md;
+    background-color: rgba($body-color, 0.7);
+  }
 
   &.open {
     opacity: 1;
@@ -17,28 +21,38 @@
 
   &__dialog {
     width: 100%;
-    max-width: 600px;
-    margin: ($base * 10) auto;
+    height: 100%;
+
+    @media (--medium-up) {
+      max-width: 600px;
+      height: auto;
+      margin: ($base * 10) auto;
+    }
   }
 
   &__content {
     position: relative;
     z-index: $z-index-10;
 
+    height: 100%;
     background-color: $white;
-    border-radius: $radius;
-    box-shadow: 0 0 2px 2px rgba($body-color, 0.2);
-    @include border($muted);
 
     &.fade-in-down {
       animation: fadeInDown $transition-time;
+    }
+
+    @media (--medium-up) {
+      height: auto;
+      border-radius: $radius;
+      box-shadow: 0 0 2px 2px rgba($body-color, 0.2);
+      @include border($muted);
     }
   }
 
   &__header,
   &__body,
   &__footer {
-    padding: $space-sm $space-md;
+    padding: $space-md;
   }
 
   &__header {
@@ -63,6 +77,10 @@
   &__footer {
     clear: fix;
     border-top: 1px solid $muted;
+
+    @media (--medium-up) {
+      background-color: $muted;
+    }
   }
 
   // only use in styleguide

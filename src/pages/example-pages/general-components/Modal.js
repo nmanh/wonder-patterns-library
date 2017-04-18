@@ -73,7 +73,7 @@ export class Modal extends React.Component {
     return (
       <div
         className={isModalOpen ? 'modal open' : 'modal'}
-        tabIndex="-1"
+        // tabIndex="-1"
         role="dialog"
         ref={(ref) => this.modal = ref}
         onClick={onRequestClose}

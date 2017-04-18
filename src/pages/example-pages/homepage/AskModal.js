@@ -6,12 +6,26 @@ import {
 class ModalFooter extends React.Component {
   render() {
     return (
-      <div className="pull-right">
-        <button
-          className="btn mrmd"
-          onClick={this.props.onRequestClose}
-        >Huỷ</button>
-        <button className="btn btn_primary">Đặt câu hỏi</button>
+      <div className="lf lf_align-middle">
+        <div className="lf_full-space">
+          <div className="f__checkbox f__checkbox_inline">
+            <label>
+              <input type="checkbox"/> Ask anonymouse
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <button
+            className="btn btn_reset mrmd"
+            onClick={this.props.onRequestClose}
+            >Huỷ</button>
+        </div>
+
+        <div>
+          <button className="btn btn_warning">Đặt câu hỏi</button>
+        </div>
+
       </div>
     );
   }
