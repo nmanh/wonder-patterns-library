@@ -9,16 +9,25 @@ const PostHasAnswer = ({ openAnswerModal }) => (
   <article className="mbxlg">
     <div>
       {/* Tags */}
-      <div className="lf lf_align-middle mbmd">
-        <div className="mrlg">
-          <button className="btn btn_primary mrsm mbxs">Kỹ năng nghe</button>
-          <button className="btn btn_primary mrsm mbxs">IELTS 5.0</button>
+      <div className="mbmd lf lf_no-wrap">
+
+        <div className="lf_full-space">
+          <div className="lf lf_align-middle">
+            <div className="mrmd">
+              <button className="btn btn_primary mrsm mbxs">Kỹ năng nghe</button>
+              <button className="btn btn_primary mrsm mbxs">IELTS 5.0</button>
+            </div>
+            <ul className="lf_full-space list-inline txt-muted mbxs">
+              <li>1 trả lời</li>
+              <li>18 lượt xem</li>
+            </ul>
+          </div>
         </div>
-        <ul className="lf_full-space list-inline txt-muted mbxs">
-          <li>1 trả lời</li>
-          <li>18 lượt xem</li>
-        </ul>
-        <button className="btn btn_special mbxs">Q&A</button>
+
+        <div>
+          <button className="btn btn_special mbxs">Q&A</button>
+        </div>
+
       </div>
     </div>
 
@@ -148,12 +157,14 @@ class LiveSession extends React.Component {
   render() {
     return (
       <div className="mbxlg">
-        <div className="lf lf_align-middle mbmd">
-          <div className="lf_full-space">
-            <img src="https://unsplash.it/40" className="img-circle mrmd" alt="" />
+        <div className="lf lf_no-wrap lf_align-middle mbmd">
+          <div className="lf_full-space mrmd">
             <span className="txt-large">Suggessted by Wonder</span>
           </div>
-          <button className="btn btn_special">Live session</button>
+
+          <div>
+            <button className="btn btn_special">Live session</button>
+          </div>
         </div>
 
         <div className="carousel">
@@ -221,12 +232,14 @@ class QuizTest extends React.Component {
   render() {
     return (
       <div className="mbxlg">
-        <div className="lf lf_align-middle mbmd">
-          <div className="lf_full-space">
-            <img src="https://unsplash.it/40" className="img-circle mrmd" alt="" />
+        <div className="lf lf_no-wrap lf_align-middle mbmd">
+          <div className="lf_full-space mrmd">
             <span className="txt-large">Suggessted by Wonder</span>
           </div>
-          <button className="btn btn_special">Quiz/Test</button>
+
+          <div>
+            <button className="btn btn_special">Quiz/Test</button>
+          </div>
         </div>
 
         <div className="carousel">
@@ -271,7 +284,7 @@ const Divider = () => (
   <div className="divider mbxlg" />
 );
 
-export const MainContent = ({ openAnswerModal, openAskModal }) => (
+  export const MainContent = ({ openAnswerModal, openAskModal }) => (
   <div>
     <ul id="nav-tab" className="nav-tab mblg">
       <li role="presentation" className="nav-tab__item active">
@@ -287,7 +300,7 @@ export const MainContent = ({ openAnswerModal, openAskModal }) => (
 
     <a
       href="#"
-      className="lf lf_align-middle mblg"
+      className="lf lf_align-middle lf_no-wrap mblg"
       onClick={(e) => {
         e.preventDefault();
         openAskModal();

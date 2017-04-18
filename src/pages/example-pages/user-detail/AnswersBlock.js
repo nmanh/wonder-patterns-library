@@ -10,16 +10,25 @@ const Answers = () => (
     <article className="mbxlg">
       <div>
         {/* Tags */}
-        <div className="lf lf_align-middle mbmd">
-          <div className="mrlg">
-            <button className="btn btn_primary mrsm mbxs">Kỹ năng nghe</button>
-            <button className="btn btn_primary mrsm mbxs">IELTS 5.0</button>
+        <div className="mbmd lf lf_no-wrap">
+
+          <div className="lf_full-space">
+            <div className="lf lf_align-middle">
+              <div className="mrmd">
+                <button className="btn btn_primary mrsm mbxs">Kỹ năng nghe</button>
+                <button className="btn btn_primary mrsm mbxs">IELTS 5.0</button>
+              </div>
+              <ul className="lf_full-space list-inline txt-muted mbxs">
+                <li>1 trả lời</li>
+                <li>18 lượt xem</li>
+              </ul>
+            </div>
           </div>
-          <ul className="lf_full-space list-inline txt-muted mbxs">
-            <li>1 trả lời</li>
-            <li>18 lượt xem</li>
-          </ul>
-          <button className="btn btn_special mbxs">Q&A</button>
+
+          <div>
+            <button className="btn btn_special mbxs">Q&A</button>
+          </div>
+
         </div>
       </div>
 

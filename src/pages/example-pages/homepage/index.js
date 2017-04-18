@@ -48,7 +48,7 @@ class HomePage extends React.Component {
               openAskModal={this.openAskModal}
             />
           </div>
-          <div className="large-3 columns">
+          <div className="large-3 columns show-for-large">
             <SideBar />
           </div>
         </div>
