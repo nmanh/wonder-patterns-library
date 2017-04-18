@@ -22,7 +22,11 @@
 html {
   box-sizing: border-box;
 
-  font-size: $font-size-base;
+  font-size: 14px;
+
+  @media (--medium-up) {
+    font-size: $font-size-base;
+  }
 }
 
 *,

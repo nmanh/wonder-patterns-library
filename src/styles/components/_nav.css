@@ -1,12 +1,17 @@
 .nav {
   display: flex;
+  max-width: $row-width;
+  margin: 0 auto;
 
-  font-size: $font-size-h4;
   text-align: center;
+
+  @media (--large-up) {
+    font-size: $font-size-h4;
+  }
 
   &__link {
     flex: 1;
-    padding: $space-lg $space-sm;
+    padding: $space-md $space-xs;
 
     font-weight: $font-weight-normal;
     line-height: 1;
@@ -20,6 +25,10 @@
       color: $white;
 
       background-color: lighten($color-primary, 10%);
+    }
+
+    @media (--medium-up) {
+      padding: $space-lg $space-sm;
     }
   }
 }

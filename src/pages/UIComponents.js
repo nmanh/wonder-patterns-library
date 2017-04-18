@@ -9,6 +9,7 @@ import {
   Modal,
   NavTab,
   NavTabV,
+  NavTabH,
   Nav,
   Divider,
   Badge,
@@ -46,6 +47,10 @@ class UIComponents extends React.Component {
           url: `${props.match.url}/nav-tab-v`,
         },
         {
+          name: 'Nav Tab Horizontal',
+          url: `${props.match.url}/nav-tab-h`,
+        },
+        {
           name: 'Nav',
           url: `${props.match.url}/nav`,
         },
@@ -77,6 +82,7 @@ class UIComponents extends React.Component {
           <Route path={`${match.url}/modal`} component={Modal} />
           <Route path={`${match.url}/nav-tab`} component={NavTab} />
           <Route path={`${match.url}/nav-tab-v`} component={NavTabV} />
+          <Route path={`${match.url}/nav-tab-h`} component={NavTabH} />
           <Route path={`${match.url}/nav`} component={Nav} />
           <Route path={`${match.url}/divider`} component={Divider} />
           <Route path={`${match.url}/badge`} component={Badge} />

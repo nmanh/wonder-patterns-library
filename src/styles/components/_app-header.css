@@ -2,13 +2,17 @@
 
   &__logo {
     display: block;
-    width: 127px;
+    width: auto;
     margin-right: $space-md;
 
     color: $white;
 
     &:hover {
       color: $white;
+    }
+
+    @media (--medium-up) {
+      width: 127px;
     }
   }
 
@@ -19,13 +23,57 @@
     left: 0;
     z-index: $z-index-10;
 
-    padding: $space-lg 0 0;
+    padding-top: $space-sm;
 
     // background-image: linear-gradient(to bottom, darken($color-primary, 20%), $color-primary);
     background-color: $color-primary;
+
+    @media (--large-up) {
+      padding-top: $space-lg;
+    }
+  }
+
+  &__search-input {
+    display: block;
+    size: 100% $space-xlg;
+    padding: $space-xs $space-sm;
+
+    font-size: $font-size-h6;
+
+    background-color: $white;
+    border-radius: $radius;
+
+    @include border($border-color);
+
+    @media (--large-up) {
+      height: auto;
+      padding-top: $space-sm;
+      padding-bottom: $space-sm;
+      font-size: $font-size-h5;
+    }
+  }
+
+  &__action-box {
+    flex-grow: 1;
+  }
+
+  &__cta-box {
+    display: none;
+
+    @media (--large-up) {
+      display: block;
+    }
   }
 
   &__ghost {
-    height: 161px;
+    height: 109px;
+
+    @media (--medium-up) {
+      height: 125px;
+    }
+
+    @media (--large-up) {
+      height: 144px;
+    }
   }
 }

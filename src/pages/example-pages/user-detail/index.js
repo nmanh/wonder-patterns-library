@@ -79,12 +79,44 @@ class UserDetail extends React.Component {
           </div>
         </div>
 
+        <div className="nav-tab-h hide-for-medium">
+          <ul className="nav-tab-h__list">
+            <li className="nav-tab-h__item active">
+              <a href="#" className="nav-tab-h__link">Answers</a>
+            </li>
+            <li className="nav-tab-h__item">
+              <a href="#" className="nav-tab-h__link">Questions</a>
+            </li>
+            <li className="nav-tab-h__item">
+              <a href="#" className="nav-tab-h__link">Blogs</a>
+            </li>
+            <li className="nav-tab-h__item">
+              <a href="#" className="nav-tab-h__link">Vocab builder</a>
+            </li>
+            <li className="nav-tab-h__item">
+              <a href="#" className="nav-tab-h__link">Followers</a>
+            </li>
+            <li className="nav-tab-h__item">
+              <a href="#" className="nav-tab-h__link">Following</a>
+            </li>
+            <li className="nav-tab-h__item">
+              <a href="#" className="nav-tab-h__link">Topic</a>
+            </li>
+            <li className="nav-tab-h__item">
+              <a href="#" className="nav-tab-h__link">Bookmarks</a>
+            </li>
+            <li className="nav-tab-h__item">
+              <a href="#" className="nav-tab-h__link">Settings</a>
+            </li>
+          </ul>
+        </div>
+
         <div className="row mblg">
-          <div className="small-12 columns">
+          <div className="small-12 columns show-for-medium">
             <div className="divider" />
           </div>
 
-          <div className="medium-3 columns">
+          <div className="medium-3 columns show-for-medium">
             <SideNav
               navActive={this.state.navActive}
               setNavActive={this.setNavActive}
