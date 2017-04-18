@@ -1,6 +1,6 @@
 import React from 'react';
-import 'slick-carousel/slick/slick';
-import 'slick-carousel/slick/slick.css';
+import 'flickity/dist/flickity.css';
+import Flickity from 'flickity/dist/flickity.pkgd.js';
 import $ from 'jquery';
 import { ButtonDropdown } from '../general-components';
 import { Loader } from './Loader';
@@ -129,29 +129,16 @@ const PostNoAnswer = () => (
 );
 
 class LiveSession extends React.Component {
-  constructor() {
-    super();
-
-    this.goToPrevSlide = this.goToPrevSlide.bind(this);
-    this.goToNextSlide = this.goToNextSlide.bind(this);
-  }
-
   componentDidMount() {
-    // initial carousel
-    $(this.slider).slick({
-      slidesToShow: 3,
-      centerPadding: '16px',
-      infinite: false,
-      arrows: false,
+    // flickity carousel
+    new Flickity( this.slider, {
+      // options
+      cellAlign: 'left',
+      freeScroll: true,
+      pageDots: false,
+      groupCells: true,
+      contain: true,
     });
-  }
-
-  goToPrevSlide() {
-    $(this.slider).slick('slickPrev');
-  }
-
-  goToNextSlide() {
-    $(this.slider).slick('slickNext');
   }
 
   render() {
@@ -167,36 +154,22 @@ class LiveSession extends React.Component {
           </div>
         </div>
 
-        <div className="carousel">
-          <div ref={(ref) => this.slider = ref}>
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <a href="#" className="txt-center" key={item}>
-                <img
-                  src="https://unsplash.it/100"
-                  className="img-circle mbmd"
-                  alt=""
-                />
-                <div className="txt-bold txt-body-color">Ms. Lisa Chan</div>
-                <div className="txt-body-color">Communicate English<br />on</div>
-                <div className="txt-bold txt-uppercase txt-body-color">IELTS 6.0 Writing</div>
-                <div>now broadcasting</div>
-              </a>
-            ))}
-          </div>
-          <button
-            className="carousel__narrow carousel__narrow_prev"
-            ref={(ref) => this.narrowPrev = ref}
-            onClick={this.goToPrevSlide}
-          >
-            <i className="fa fa-chevron-left fa-lg" />
-          </button>
-          <button
-            className="carousel__narrow carousel__narrow_next"
-            ref={(ref) => this.narrowNext = ref}
-            onClick={this.goToNextSlide}
-          >
-            <i className="fa fa-chevron-right fa-lg" />
-          </button>
+        <div ref={ref => this.slider = ref}>
+          {[1, 2, 3, 4, 5, 6].map(item => (
+            <a href="#" className="txt-center" key={item} style={{display: 'block', width: '200px'}}>
+              <img
+                src="https://unsplash.it/100"
+                className="img-circle mbmd"
+                alt=""
+                width="100"
+                height="100"
+              />
+              <div className="txt-bold txt-body-color">Ms. Lisa Chan</div>
+              <div className="txt-body-color">Communicate English<br />on</div>
+              <div className="txt-bold txt-uppercase txt-body-color">IELTS 6.0 Writing</div>
+              <div>now broadcasting</div>
+            </a>
+          ))}
         </div>
       </div>
     );
@@ -204,29 +177,16 @@ class LiveSession extends React.Component {
 }
 
 class QuizTest extends React.Component {
-  constructor() {
-    super();
-
-    this.goToPrevSlide = this.goToPrevSlide.bind(this);
-    this.goToNextSlide = this.goToNextSlide.bind(this);
-  }
-
   componentDidMount() {
-    // initial carousel
-    $(this.slider).slick({
-      slidesToShow: 3,
-      centerPadding: '16px',
-      infinite: false,
-      arrows: false,
+    // flickity carousel
+    new Flickity( this.slider, {
+      // options
+      cellAlign: 'left',
+      freeScroll: true,
+      pageDots: false,
+      groupCells: true,
+      contain: true,
     });
-  }
-
-  goToPrevSlide() {
-    $(this.slider).slick('slickPrev');
-  }
-
-  goToNextSlide() {
-    $(this.slider).slick('slickNext');
   }
 
   render() {
@@ -242,38 +202,22 @@ class QuizTest extends React.Component {
           </div>
         </div>
 
-        <div className="carousel">
-          <div ref={(ref) => this.slider = ref}>
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <div className="panel txt-center mlsm mrsm" key={item}>
-                <div className="panel__heading">
-                  <h3 className="panel__title">Quiz Test</h3>
-                </div>
-                <div className="panel__body">
-                  <p>
-                    Vocabulary
-                    <br />
-                    SAT Words
-                  </p>
-                  <button className="btn btn_warning-bordered">Take Quiz</button>
-                </div>
+        <div ref={(ref) => this.slider = ref}>
+          {[1, 2, 3, 4, 5, 6].map(item => (
+            <div className="panel txt-center mlsm mrsm" key={item}>
+              <div className="panel__heading">
+                <h3 className="panel__title">Quiz Test</h3>
               </div>
-            ))}
-          </div>
-          <button
-            className="carousel__narrow carousel__narrow_prev"
-            ref={(ref) => this.narrowPrev = ref}
-            onClick={this.goToPrevSlide}
-          >
-            <i className="fa fa-chevron-left fa-lg" />
-          </button>
-          <button
-            className="carousel__narrow carousel__narrow_next"
-            ref={(ref) => this.narrowNext = ref}
-            onClick={this.goToNextSlide}
-          >
-            <i className="fa fa-chevron-right fa-lg" />
-          </button>
+              <div className="panel__body">
+                <p>
+                  Vocabulary
+                  <br />
+                  SAT Words
+                </p>
+                <button className="btn btn_warning-bordered">Take Quiz</button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     );
