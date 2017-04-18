@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://nmanh.github.io/wonder-patterns-library/",
   "dependencies": {
+    "flickity": "^2.0.5",
     "normalize.css": "^6.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
