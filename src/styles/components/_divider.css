@@ -1,6 +1,5 @@
 .divider {
   size: 100% $space-xs;
 
-  // background-color: lighten($color-primary, 40%);
-  background-color: lighten($color-primary, 55%);
+  background-color: $alabaster;
 }

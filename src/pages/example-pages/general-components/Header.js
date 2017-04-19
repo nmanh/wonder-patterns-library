@@ -5,7 +5,7 @@ export const Header = ({ openAskModal }) => (
   <header className="app-header mbxxlg">
     <div className="app-header__main">
 
-      <div className="row column lf lf_no-wrap lf_align-middle mbsm">
+      <div className="row column lf lf_no-wrap lf_align-middle large-mbsm mblg">
 
         <Link to="/example-pages/homepage" className="app-header__logo mrmd">
           <h1 className="mb-reset show-for-medium">Wonder</h1>
@@ -38,7 +38,7 @@ export const Header = ({ openAskModal }) => (
 
         <a href="#" className="badge mrxlg txt-white">
           <div className="badge__icon">
-            <i className="fa fa-bell-o fa-lg" />
+            <i className="fa fa-bell fa-lg" />
           </div>
           <div className="badge__addon">4</div>
         </a>
@@ -46,10 +46,7 @@ export const Header = ({ openAskModal }) => (
         <div>
           <Link to="/example-pages/user-detail" className="lf lf_align-middle txt-white">
             <img src="https://unsplash.it/40" className="img-circle mrsm" alt="avatar" />
-            <div className="show-for-medium">
-              <span className="mrsm">Linh duong</span>
-              <i className="fa fa-angle-down"></i>
-            </div>
+            <div className="show-for-medium">Linh duong</div>
           </Link>
         </div>
 

@@ -4,8 +4,8 @@
 
   &__addon {
     position: absolute;
-    top: -6px;
-    right: -14px;
+    top: -4px;
+    right: -8px;
 
     height: $space-md;
     padding: 0 5px;

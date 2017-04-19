@@ -24,7 +24,7 @@
     &:hover {
       color: $white;
 
-      background-color: lighten($color-primary, 10%);
+      background-color: lighten($color-primary, 5%);
     }
 
     @media (--medium-up) {

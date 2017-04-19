@@ -25,18 +25,15 @@
   // panel special need difference look
 
   &_special {
-    // background-color: lighten($color-primary, 48%);
-    background-color: lighten($color-primary, 65%);
+    background-color: $alabaster;
 
-    // @include border(lighten($color-primary, 48%));
-    @include border(lighten($color-primary, 65%));
+    @include border($alabaster);
 
     .panel__heading {
       text-transform: uppercase;
 
       background-color: transparent;
-      // border-bottom: $space-sm solid lighten($color-primary, 30%);
-      border-bottom: $space-sm solid lighten($color-primary, 55%);
+      border-bottom: $space-sm solid darken($alabaster, 10%);
     }
   }
 }

@@ -4,29 +4,11 @@ import {
   ButtonDropdown,
 } from '../general-components';
 
-class ModalFooter extends React.Component {
-  render() {
-    return (
-      <div className="lf lf_align-middle">
-
-        <div className="lf_full-space">
-          <button className="btn btn_warning mrmd">Upvote 2</button>
-          <a href="#" className="txt-muted mrmd">Downvote</a>
-          <a href="#" className="txt-muted mrmd">Bình luận (4)</a>
-        </div>
-
-        <ButtonDropdown />
-      </div>
-    );
-  }
-}
-
 export const AnswerModal = ({ isModalOpen, onRequestClose }) => (
   <Modal
     isModalOpen={isModalOpen}
     onRequestClose={onRequestClose}
     title='Câu trả lời tốt nhất'
-    modalFooter={<ModalFooter />}
   >
     <div>
       {/* Tags */}
@@ -84,6 +66,17 @@ export const AnswerModal = ({ isModalOpen, onRequestClose }) => (
       <p>
         "Tôi tạm thời dừng, việc dẹp vỉa hè được quận giao lại cho các phường tăng tốc, quyết liệt làm. Những vụ việc nào nóng, khó, anh em địa bàn làm không được thì tôi sẽ đích thân xuống giải quyết", ông Hải nói.
       </p>
+    </div>
+
+    <div className="lf lf_align-middle">
+
+      <div className="lf_full-space">
+        <button className="btn btn_warning mrmd">Upvote 2</button>
+        <a href="#" className="txt-muted mrmd">Downvote</a>
+        <a href="#" className="txt-muted mrmd">Bình luận (4)</a>
+      </div>
+
+      <ButtonDropdown />
     </div>
   </Modal>
 )

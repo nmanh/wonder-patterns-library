@@ -6,7 +6,7 @@
  * Licensed under MIT Open Source
  */
 .row {
-  max-width: 61.875rem;
+  max-width: 62rem;
   margin-right: auto;
   margin-left: auto; }
   .row::before, .row::after {

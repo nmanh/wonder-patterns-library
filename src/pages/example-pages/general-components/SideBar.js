@@ -9,7 +9,7 @@ const PanelSpecial = ({ heading, items }) => (
       <ul className="list-unstyled">
         {items.map((item) => (
           <li className="mbmd" key={item}>
-            <a href="#" className="txt-body-color">{item}</a>
+            <a href="#">{item}</a>
           </li>
         ))}
       </ul>

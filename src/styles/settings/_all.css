@@ -15,39 +15,33 @@
 $base: 8px;
 $type-scale: 1.25;
 $line-height-base: 1.4;
-$row-width: 990px;
+$row-width: 992px;
 
 /* 2. Colors */
-$mine-shaft: #2a2a2a;
+$emperor: #514f4f;
 $white: #fff;
-$silver: #c0c0c0;
+$silver: #ccc;
+$mercury: #e3e2e1;
 
 $blue-jeans: #5bc0eb;
 $blue-jeans-lighten: lighten($blue-jeans, 10%);
 $blue-jeans-darken: darken($blue-jeans, 10%);
 
 $android-green: #9bc53d;
-
-$princeton-orange: #fa7921;
-
 $flame: #e55934;
+$jade: #02a876;
+$jaffa: #f07736;
+$alabaster: #f8f8f8;
 
-/* new color scheme */
-$highland: #769365;
-$hot-cinnamon: #e36928;
-
-/* new color scheme */
-// $color-primary: $highland;
-$color-primary: #079e6b;
-$color-secondary: $mine-shaft;
+$color-primary: $jade;
+$color-secondary: $emperor;
 $color-info: $blue-jeans;
 $color-success: $android-green;
-// $color-warning: $hot-cinnamon;
-$color-warning: #ff8e2d;
+$color-warning: $jaffa;
 $color-danger: $flame;
 
 $body-bg: $white;
-$body-color: $mine-shaft;
+$body-color: $emperor;
 $link-color: $color-primary;
 $muted: $silver;
 
@@ -87,7 +81,7 @@ $space-xxlg: ($base * 6);
 /* 6. Border */
 $radius: 3px;
 $radius-big: $base;
-$border-color: $silver;
+$border-color: $mercury;
 
 /* 7. Misc */
 $opacity: 0.6;
