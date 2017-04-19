@@ -70,7 +70,7 @@
     min-height: calc(100vh - 33px - 61px);
 
     @media (--medium-up) {
-      height: auto;
+      min-height: auto;
     }
   }
 
