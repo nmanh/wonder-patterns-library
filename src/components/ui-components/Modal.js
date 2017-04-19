@@ -15,10 +15,8 @@ const StaticModal = () => (
         <div className="modal__dialog" role="document">
           <div className="modal__content fade-in-down">
             <div className="modal__header">
-              <h3 className="modal__title">Modal example</h3>
-
               <button className="modal__btn-close">
-                <i className="fa fa-times"></i>
+                <i className="fa fa-times fa-lg"></i>
               </button>
             </div>
             <div className="modal__body">

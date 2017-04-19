@@ -42,7 +42,6 @@ export class AskModal extends React.Component {
       <Modal
         isModalOpen={isModalOpen}
         onRequestClose={onRequestClose}
-        title='Nhập thông tin câu hỏi'
         modalFooter={<ModalFooter onRequestClose={onRequestClose} />}
       >
         <form className="f">

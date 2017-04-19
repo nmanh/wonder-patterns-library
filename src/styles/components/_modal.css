@@ -49,38 +49,35 @@
     }
   }
 
-  &__header,
   &__body,
   &__footer {
     padding: $space-md;
   }
 
   &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border-bottom: 1px solid $muted;
-  }
-
-  &__title {
-    margin-bottom: 0;
+    clear: fix;
   }
 
   &__btn-close {
-    padding: $space-sm;
+    float: right;
+    padding: $space-sm $space-md;
 
     background-color: transparent;
     border: 0;
   }
 
-  &__footer {
-    clear: fix;
-    border-top: 1px solid $muted;
+  &__body {
+    min-height: calc(100vh - 33px - 61px);
 
     @media (--medium-up) {
-      background-color: $muted;
+      height: auto;
     }
+  }
+
+  &__footer {
+    clear: fix;
+    background-color: $muted;
+    border-top: 1px solid $muted;
   }
 
   // only use in styleguide

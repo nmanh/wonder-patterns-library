@@ -2,12 +2,11 @@ import React, { PropTypes } from 'react';
 
 export const ModalHeader = ({ onRequestClose, title }) => (
   <div className="modal__header">
-    <h3 className="modal__title">{title}</h3>
     <button
       className="modal__btn-close"
       onClick={onRequestClose}
     >
-      <i className="fa fa-times"></i>
+      <i className="fa fa-times fa-lg"></i>
     </button>
   </div>
 );

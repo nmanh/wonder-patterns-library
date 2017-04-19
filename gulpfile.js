@@ -32,7 +32,7 @@ gulp.task('styles', ['styles:lint'], () => {
         rootValue: 16,
         replace: true,
         propWhiteList: [],
-        selectorBlackList: [/^html$/],
+        selectorBlackList: [/^html$/, 'modal__body'],
       }),
       assets({
         loadPaths: ['images/'],
