@@ -13,7 +13,8 @@ import {
   Nav,
   Divider,
   Badge,
-  Frame
+  Frame,
+  Ribbon,
 } from '../components/ui-components';
 import { PLSubNav } from '../components/patterns-library';
 
@@ -66,6 +67,10 @@ class UIComponents extends React.Component {
           name: 'Frame',
           url: `${props.match.url}/frame`,
         },
+        {
+          name: 'Ribbon',
+          url: `${props.match.url}/ribbon`,
+        }
       ]
     }
   }
@@ -87,6 +92,7 @@ class UIComponents extends React.Component {
           <Route path={`${match.url}/divider`} component={Divider} />
           <Route path={`${match.url}/badge`} component={Badge} />
           <Route path={`${match.url}/frame`} component={Frame} />
+          <Route path={`${match.url}/ribbon`} component={Ribbon} />
           <Route path={match.url} render={() => (
             <h2>Overview</h2>
           )} />

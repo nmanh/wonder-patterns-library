@@ -27,6 +27,7 @@ gulp.task('styles', ['styles:lint'], () => {
     shortSize   = require('postcss-short-size'),
     rucksack    = require('rucksack-css'),
     animation   = require('postcss-animation'),
+    triangle    = require('postcss-triangle'),
     processors  = [
       pxtorem({
         rootValue: 16,
@@ -42,6 +43,7 @@ gulp.task('styles', ['styles:lint'], () => {
       }),
       shortSize,
       rucksack(),
+      triangle(),
       customMedia,
       at2x,
       animation(),
