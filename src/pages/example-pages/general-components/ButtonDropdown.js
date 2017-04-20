@@ -33,50 +33,21 @@ export class ButtonDropdown extends React.Component {
           <i className="fa fa-ellipsis-h fa-2x txt-primary-color" />
         </div>
         <div className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
-          <ul className="list-unstyled">
-            <li className="btn-dropdown__menu-item">
-              <button
-                className="btn btn_reset"
-                onMouseDown={(e) => {
-                  e.preventDefault();
-                }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  e.preventDefault();
-                }}
+          {['Thank', 'Bookmark', 'Edit', 'Delete'].map(item => (
+            <button
+              key={item}
+              className="btn-dropdown__item"
+              onMouseDown={(e) => {
+                e.preventDefault();
+              }}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
               >
-                <i className="fa fa-bookmark-o"></i> Bookmark
+                {item}
               </button>
-            </li>
-            <li className="btn-dropdown__menu-item">
-              <button
-                className="btn btn_reset"
-                onMouseDown={(e) => {
-                  e.preventDefault();
-                }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  e.preventDefault();
-                }}
-              >
-                <i className="fa fa-pencil"></i> Edit
-              </button>
-            </li>
-            <li className="btn-dropdown__menu-item">
-              <button
-                className="btn btn_reset"
-                onMouseDown={(e) => {
-                  e.preventDefault();
-                }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  e.preventDefault();
-                }}
-              >
-                <i className="fa fa-trash"></i> Delete
-              </button>
-            </li>
-          </ul>
+          ))}
         </div>
       </a>
     );

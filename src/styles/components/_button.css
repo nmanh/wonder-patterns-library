@@ -137,9 +137,9 @@
     margin-top: $space-xs;
 
     visibility: hidden;
-    background-color: $white;
+    background-color: $alabaster;
     border-radius: $radius;
-    box-shadow: 2px 2px 4px rgba($body-color, 0.5);
+    box-shadow: 2px 5px 7px -2px rgba($body-color, 0.4);
     opacity: 0;
 
     transition: opacity $transition-time $transition-effect;
@@ -152,20 +152,16 @@
     }
   }
 
-  &__menu-item {
-    list-style: none;
+  &__item {
+    display: block;
+    width: 100%;
+    padding: $space-sm $space-md;
 
-    &:not(:last-of-type) {
-      border-bottom: 1px solid $muted;
-    }
+    color: $color-primary;
+    text-align: left;
 
-    > a, button { /* stylelint-disable-line */
-      display: block;
-      width: 100%;
-      padding: $space-sm $space-md;
-
-      text-align: left;
-    }
+    background-color: transparent;
+    border: 0;
   }
 }
 
