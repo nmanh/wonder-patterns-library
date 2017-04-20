@@ -18,19 +18,6 @@ const PanelSpecial = ({ heading, items }) => (
   </div>
 );
 
-const BlogItems = [
-  'Thanh tra bổ nhiệm bà Trần Vũ Quỳnh Anh: Lộ nhiều sai sót',
-  'Samsung Galaxy S8 và S8+ ra mắt với màn hình vô cực, 4G tốc độ 1 Gbps',
-  'Phó chủ tịch phường nghỉ sinh, chủ tịch... lãnh đủ!',
-  'Chi 1.500 USD/m2 mua nhà Home City, vì sao cư dân vẫn bức xúc?'
-];
-const Blog = () => (
-  <PanelSpecial
-    heading="Blog"
-    items={BlogItems}
-  />
-);
-
 const VocabBuilder = () => (
   <div className="panel panel_special mblg">
     <div className="panel__heading">
@@ -73,7 +60,6 @@ const LiveSession = () => (
 
 export const SideBar = () => (
   <aside>
-    <Blog />
     <VocabBuilder />
     <LiveSession />
     <QuizTest />

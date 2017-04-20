@@ -11,17 +11,43 @@ export const Ribbon = () => (
   <div>
     <PLSectionHeading text="Ribbon" />
     <PLWrapper>
-      <PLHeading text="Ribbon" />
+      <PLHeading text="Ribbon normal" />
       <PLExample>
-        <div className="ribbon">
-          <div className="ribbon__content">14 April 2012</div>
+        <div className="row">
+          <div className="medium-6 column">
+            <div className="ribbon">
+              <div className="ribbon__content">14 April 2012</div>
+            </div>
+          </div>
         </div>
       </PLExample>
       <PLCodeBlock>
         {`
+          <div className="ribbon">
+            <div className="ribbon__content">14 April 2012</div>
+          </div>
+        `}
+      </PLCodeBlock>
+    </PLWrapper>
 
-          `}
-        </PLCodeBlock>
-      </PLWrapper>
+    <PLWrapper>
+      <PLHeading text="Ribbon translate left 23px" />
+      <PLExample>
+        <div className="row">
+          <div className="medium-6 column">
+            <div className="ribbon ribbon_translate-left_23">
+              <div className="ribbon__content">14 April 2012</div>
+            </div>
+          </div>
+        </div>
+      </PLExample>
+      <PLCodeBlock>
+        {`
+          <div className="ribbon">
+            <div className="ribbon__content">14 April 2012</div>
+          </div>
+        `}
+      </PLCodeBlock>
+    </PLWrapper>
   </div>
 );

@@ -4,6 +4,9 @@ import { ButtonDropdown } from '../general-components';
 const BlogHasThumbnail = () => (
   <article className="panel mbxlg">
     <div className="panel__body">
+      <div className="ribbon ribbon_translate-left_23 mbmd">
+        <div className="ribbon__content">14 April 2012</div>
+      </div>
       <div>
         {/* Tags */}
         <div className="lf lf_align-middle mbmd">
@@ -80,6 +83,9 @@ const BlogHasThumbnail = () => (
 const Blog = () => (
   <article className="panel mbxlg">
     <div className="panel__body">
+      <div className="ribbon ribbon_translate-left_23 mbmd">
+        <div className="ribbon__content">14 April 2012</div>
+      </div>
       <div>
         {/* Tags */}
         <div className="lf lf_align-middle mbmd">
