@@ -21,11 +21,10 @@
     top: 0;
     right: 0;
     left: 0;
-    z-index: $z-index-10;
+    z-index: $z-index-20;
 
     padding-top: $space-sm;
 
-    // background-image: linear-gradient(to bottom, darken($color-primary, 20%), $color-primary);
     background-color: $color-primary;
 
     @media (--large-up) {
@@ -33,10 +32,41 @@
     }
   }
 
+  &__search-wrap {
+    position: relative;
+  }
+
+  &__suggest-box {
+    position: absolute;
+    top: $space-xxlg;
+
+    width: 100%;
+    padding: $space-sm 0;
+
+    background-color: $white;
+    border-radius: $radius;
+  }
+
+  &__suggest-item {
+    display: block;
+    padding: $space-sm;
+
+    color: $body-color;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $border-color;
+    }
+
+    &.active,
+    &:hover {
+      background-color: $border-color;
+    }
+  }
+
   &__search-input {
     display: block;
     size: 100% $space-xlg;
-    padding: $space-xs $space-sm;
+    padding: $space-xs $space-sm $space-xs $space-xlg;
 
     font-size: $font-size-h6;
 
@@ -45,12 +75,31 @@
 
     @include border($border-color);
 
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
     @media (--large-up) {
       height: auto;
       padding-top: $space-sm;
       padding-bottom: $space-sm;
       font-size: $font-size-h5;
     }
+  }
+
+  &__search-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: $space-xs $space-sm;
+
+    color: $color-primary;
+
+    background-color: transparent;
+    border: 0;
   }
 
   &__action-box {
@@ -75,5 +124,12 @@
     @media (--large-up) {
       height: 144px;
     }
+  }
+
+  &__backdrop {
+    position: fixed 0;
+    z-index: $z-index-10;
+
+    background-color: rgba($body-color, 0.7);
   }
 }
