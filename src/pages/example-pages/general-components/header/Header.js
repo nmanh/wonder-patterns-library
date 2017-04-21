@@ -104,7 +104,13 @@ export class Header extends React.Component {
         <div className="app-header__ghost" style={{height: '60px'}} />
 
         {this.state.isShowBackdrop && (
-          <div className="app-header__backdrop" />
+          <div
+            className="app-header__backdrop"
+            onClick={() => {
+              this.hideSuggestion();
+              this.hideBackdrop();
+            }}
+          />
         )}
       </header>
     )
