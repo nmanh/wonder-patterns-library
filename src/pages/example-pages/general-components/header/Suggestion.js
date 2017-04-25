@@ -38,7 +38,7 @@ class Suggestion extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydow', this.handleKeyEvent);
+    window.removeEventListener('keydown', this.handleKeyEvent);
     window.removeEventListener('click', this.handleWindowClick);
   }
 
