@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-export const ModalHeader = ({ onRequestClose, title }) => (
+export const ModalHeader = ({ onRequestClose }) => (
   <div className="modal__header">
     <button
       className="modal__btn-close"
@@ -65,8 +65,8 @@ export class Modal extends React.Component {
     const {
       isModalOpen,
       onRequestClose,
-      title,
       modalFooter,
+      ...rest
     } = this.props;
 
     return (
@@ -84,9 +84,9 @@ export class Modal extends React.Component {
         >
           <div className="modal__content fade-in-down">
 
-            <ModalHeader onRequestClose={onRequestClose} title={title} />
+            <ModalHeader onRequestClose={onRequestClose} />
 
-            <ModalBody {...this.props} />
+            <ModalBody {...rest} />
 
             {(modalFooter) && (<ModalFooter modalFooter={modalFooter} />)}
 
@@ -100,6 +100,5 @@ export class Modal extends React.Component {
 Modal.propTypes = {
   isModalOpen: PropTypes.bool.isRequired,
   onRequestClose: PropTypes.func.isRequired,
-  title: PropTypes.string,
   modalFooter: PropTypes.element,
 };

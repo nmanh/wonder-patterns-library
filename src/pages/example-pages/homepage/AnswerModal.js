@@ -8,7 +8,6 @@ export const AnswerModal = ({ isModalOpen, onRequestClose }) => (
   <Modal
     isModalOpen={isModalOpen}
     onRequestClose={onRequestClose}
-    title='Câu trả lời tốt nhất'
   >
     <div>
       {/* Tags */}

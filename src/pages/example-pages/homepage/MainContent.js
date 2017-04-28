@@ -6,7 +6,7 @@ import { ButtonDropdown } from '../general-components';
 import { Loader } from './Loader';
 
 const PostHasAnswer = ({ openAnswerModal }) => (
-  <article className="mbxlg">
+  <article className="ptxlg pbxlg hover">
     <div>
       {/* Tags */}
       <div className="mbmd lf lf_no-wrap">
@@ -89,7 +89,7 @@ const PostHasAnswer = ({ openAnswerModal }) => (
 )
 
 const PostNoAnswer = () => (
-  <article className="mbxlg">
+  <article className="ptxlg pbxlg hover">
     <div>
       {/* Tags */}
       <div className="lf lf_align-middle mbmd">
@@ -156,7 +156,7 @@ class LiveSession extends React.Component {
 
   render() {
     return (
-      <div className="mbxlg">
+      <div className="ptxlg pbxlg">
         <div className="lf lf_no-wrap lf_align-middle mbmd">
           <div className="lf_full-space mrmd">
             <span className="txt-large">Suggessted by Wonder</span>
@@ -231,7 +231,7 @@ class QuizTest extends React.Component {
 
   render() {
     return (
-      <div className="mbxlg">
+      <div className="ptxlg pbxlg">
         <div className="lf lf_no-wrap lf_align-middle mbmd">
           <div className="lf_full-space mrmd">
             <span className="txt-large">Suggessted by Wonder</span>
@@ -280,8 +280,8 @@ class QuizTest extends React.Component {
   }
 }
 
-const Divider = () => (
-  <div className="divider mbxlg" />
+const Divider = ({ helpCls }) => (
+  <div className={helpCls ? `divider ${helpCls}` : 'divider'} />
 );
 
   export const MainContent = ({ openAnswerModal, openAskModal }) => (
@@ -330,7 +330,7 @@ const Divider = () => (
     <Divider />
 
     <PostNoAnswer />
-    <Divider />
+    <Divider helpCls="mbxlg" />
 
     <Loader />
 

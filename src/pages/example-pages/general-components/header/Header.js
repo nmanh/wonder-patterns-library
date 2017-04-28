@@ -43,12 +43,12 @@ export class Header extends React.Component {
 
           <div className="row column lf lf_no-wrap lf_align-middle large-mbsm mblg">
 
-            <Link to="/example-pages/homepage" className="app-header__logo mrmd">
+            <Link to="/example-pages/homepage" className="app-header__logo medium-mrsm mrmd">
               <h1 className="mb-reset show-for-medium">Wonder</h1>
               <h1 className="mb-reset show-for-small-only">W</h1>
             </Link>
 
-            <div className="app-header__action-box mrlg">
+            <div className="app-header__action-box medium-mrmd mrlg">
 
               <div className="lf lf_no-wrap">
 

@@ -51,7 +51,7 @@
 
   &__body,
   &__footer {
-    padding: $space-md;
+    padding: $space-md $space-lg;
   }
 
   &__header {

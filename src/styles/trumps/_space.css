@@ -16,6 +16,8 @@ $space-values : (
 // margin and padding shorthands
 $space-prefixes : (
   p: padding,
+  pt: padding-top,
+  pb: padding-bottom,
   mt : margin-top,
   mr : margin-right,
   mb : margin-bottom,

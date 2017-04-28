@@ -43,7 +43,7 @@ export const Ribbon = () => (
       </PLExample>
       <PLCodeBlock>
         {`
-          <div className="ribbon">
+          <div className="ribbon ribbon_translate-left_23">
             <div className="ribbon__content">14 April 2012</div>
           </div>
         `}

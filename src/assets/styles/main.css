@@ -2482,7 +2482,7 @@ textarea.f__control {
 }
 
 .modal__body, .modal__footer {
-  padding: 16px;
+  padding: 16px 24px;
 }
 
 .modal__header:after {
@@ -2889,6 +2889,7 @@ textarea.f__control {
   font-size: 0.8rem;
   color: #fff;
   text-align: center;
+  pointer-events: none;
   background-color: #f07736;
   border-radius: 0.5rem;
 }
@@ -3185,6 +3186,54 @@ textarea.f__control {
   padding: 3.5rem;
 }
 
+.ptxs {
+  padding-top: 0.25rem;
+}
+
+.ptsm {
+  padding-top: 0.5rem;
+}
+
+.ptmd {
+  padding-top: 1rem;
+}
+
+.ptlg {
+  padding-top: 1.5rem;
+}
+
+.ptxlg {
+  padding-top: 2rem;
+}
+
+.ptxxlg {
+  padding-top: 3.5rem;
+}
+
+.pbxs {
+  padding-bottom: 0.25rem;
+}
+
+.pbsm {
+  padding-bottom: 0.5rem;
+}
+
+.pbmd {
+  padding-bottom: 1rem;
+}
+
+.pblg {
+  padding-bottom: 1.5rem;
+}
+
+.pbxlg {
+  padding-bottom: 2rem;
+}
+
+.pbxxlg {
+  padding-bottom: 3.5rem;
+}
+
 .mtxs {
   margin-top: 0.25rem;
 }
@@ -3300,6 +3349,42 @@ textarea.f__control {
   .medium-pxxlg {
     padding: 3.5rem;
   }
+  .medium-ptxs {
+    padding-top: 0.25rem;
+  }
+  .medium-ptsm {
+    padding-top: 0.5rem;
+  }
+  .medium-ptmd {
+    padding-top: 1rem;
+  }
+  .medium-ptlg {
+    padding-top: 1.5rem;
+  }
+  .medium-ptxlg {
+    padding-top: 2rem;
+  }
+  .medium-ptxxlg {
+    padding-top: 3.5rem;
+  }
+  .medium-pbxs {
+    padding-bottom: 0.25rem;
+  }
+  .medium-pbsm {
+    padding-bottom: 0.5rem;
+  }
+  .medium-pbmd {
+    padding-bottom: 1rem;
+  }
+  .medium-pblg {
+    padding-bottom: 1.5rem;
+  }
+  .medium-pbxlg {
+    padding-bottom: 2rem;
+  }
+  .medium-pbxxlg {
+    padding-bottom: 3.5rem;
+  }
   .medium-mtxs {
     margin-top: 0.25rem;
   }
@@ -3392,6 +3477,42 @@ textarea.f__control {
   }
   .large-pxxlg {
     padding: 3.5rem;
+  }
+  .large-ptxs {
+    padding-top: 0.25rem;
+  }
+  .large-ptsm {
+    padding-top: 0.5rem;
+  }
+  .large-ptmd {
+    padding-top: 1rem;
+  }
+  .large-ptlg {
+    padding-top: 1.5rem;
+  }
+  .large-ptxlg {
+    padding-top: 2rem;
+  }
+  .large-ptxxlg {
+    padding-top: 3.5rem;
+  }
+  .large-pbxs {
+    padding-bottom: 0.25rem;
+  }
+  .large-pbsm {
+    padding-bottom: 0.5rem;
+  }
+  .large-pbmd {
+    padding-bottom: 1rem;
+  }
+  .large-pblg {
+    padding-bottom: 1.5rem;
+  }
+  .large-pbxlg {
+    padding-bottom: 2rem;
+  }
+  .large-pbxxlg {
+    padding-bottom: 3.5rem;
   }
   .large-mtxs {
     margin-top: 0.25rem;
@@ -3486,6 +3607,42 @@ textarea.f__control {
   .xlarge-pxxlg {
     padding: 3.5rem;
   }
+  .xlarge-ptxs {
+    padding-top: 0.25rem;
+  }
+  .xlarge-ptsm {
+    padding-top: 0.5rem;
+  }
+  .xlarge-ptmd {
+    padding-top: 1rem;
+  }
+  .xlarge-ptlg {
+    padding-top: 1.5rem;
+  }
+  .xlarge-ptxlg {
+    padding-top: 2rem;
+  }
+  .xlarge-ptxxlg {
+    padding-top: 3.5rem;
+  }
+  .xlarge-pbxs {
+    padding-bottom: 0.25rem;
+  }
+  .xlarge-pbsm {
+    padding-bottom: 0.5rem;
+  }
+  .xlarge-pbmd {
+    padding-bottom: 1rem;
+  }
+  .xlarge-pblg {
+    padding-bottom: 1.5rem;
+  }
+  .xlarge-pbxlg {
+    padding-bottom: 2rem;
+  }
+  .xlarge-pbxxlg {
+    padding-bottom: 3.5rem;
+  }
   .xlarge-mtxs {
     margin-top: 0.25rem;
   }
@@ -3578,6 +3735,42 @@ textarea.f__control {
   }
   .xxlarge-pxxlg {
     padding: 3.5rem;
+  }
+  .xxlarge-ptxs {
+    padding-top: 0.25rem;
+  }
+  .xxlarge-ptsm {
+    padding-top: 0.5rem;
+  }
+  .xxlarge-ptmd {
+    padding-top: 1rem;
+  }
+  .xxlarge-ptlg {
+    padding-top: 1.5rem;
+  }
+  .xxlarge-ptxlg {
+    padding-top: 2rem;
+  }
+  .xxlarge-ptxxlg {
+    padding-top: 3.5rem;
+  }
+  .xxlarge-pbxs {
+    padding-bottom: 0.25rem;
+  }
+  .xxlarge-pbsm {
+    padding-bottom: 0.5rem;
+  }
+  .xxlarge-pbmd {
+    padding-bottom: 1rem;
+  }
+  .xxlarge-pblg {
+    padding-bottom: 1.5rem;
+  }
+  .xxlarge-pbxlg {
+    padding-bottom: 2rem;
+  }
+  .xxlarge-pbxxlg {
+    padding-bottom: 3.5rem;
   }
   .xxlarge-mtxs {
     margin-top: 0.25rem;
@@ -3723,6 +3916,15 @@ textarea.f__control {
 
 .shadow {
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(81, 79, 79, 0.4);
+}
+
+.hover {
+  -webkit-transition: background-color 0.25s ease-in;
+  transition: background-color 0.25s ease-in;
+}
+
+.hover:hover {
+  background-color: #f8f8f8;
 }
 
 .slick-slide img {

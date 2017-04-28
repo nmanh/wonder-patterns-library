@@ -49,18 +49,16 @@ export default class Notification extends React.Component {
   toggleDropdown(e) {
     e.preventDefault();
     this.setState({ isShowDropdown: !this.state.isShowDropdown });
-    console.log('show');
   }
 
   hideDropdown() {
     this.setState({ isShowDropdown: false });
-    console.log('hide');
   }
 
   render() {
     return (
       <div
-        className="badge mrxlg"
+        className="badge medium-mrmd mrxlg"
         onClick={e => e.stopPropagation()}
       >
         <a
