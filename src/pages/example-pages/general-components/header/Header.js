@@ -35,10 +35,12 @@ export class Header extends React.Component {
   }
 
   render() {
-    const { openAskModal } = this.props;
+    const { openAskModal, removeMarginBottom } = this.props;
+
+    const cls = removeMarginBottom ? 'app-header' : 'app-header mbxxlg'
 
     return (
-      <header className="app-header mbxxlg">
+      <header className={cls}>
         <div className="app-header__main">
 
           <div className="row column lf lf_no-wrap lf_align-middle large-mbsm mblg">
@@ -88,12 +90,12 @@ export class Header extends React.Component {
             <NavLink to="/example-pages/blog" className="nav__link">
               <i className="fa fa-comments" /> <span className="show-for-medium">Blog</span>
             </NavLink>
-            <a href="#" className="nav__link">
+            {/* <a href="#" className="nav__link">
               <i className="fa fa-video-camera" /> <span className="show-for-medium">Live session</span>
-            </a>
-            <a href="#" className="nav__link">
+            </a> */}
+            <NavLink to="/example-pages/vocab" className="nav__link">
               <i className="fa fa-edit" /> <span className="show-for-medium">Vocab</span>
-            </a>
+            </NavLink>
             <a href="#" className="nav__link">
               <i className="fa fa-question-circle" /> <span className="show-for-medium">Quiz/Test</span>
             </a>

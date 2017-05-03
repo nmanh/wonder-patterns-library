@@ -1,0 +1,5 @@
+.well {
+  padding: $space-md 0;
+
+  background-color: $alabaster;
+}

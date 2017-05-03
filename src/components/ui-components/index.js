@@ -9,3 +9,4 @@ export { Frame } from './Frame';
 export { NavTabV } from './NavTabV';
 export { NavTabH } from './NavTabH';
 export { Ribbon } from './Ribbon';
+export { Well } from './Well';

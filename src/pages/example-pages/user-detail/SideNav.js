@@ -23,7 +23,7 @@ class SideNav extends React.Component {
         },
         {
           id: 'vocab',
-          title: 'Vocab Builder',
+          title: 'Vocab list',
           addon: 4,
         },
         {

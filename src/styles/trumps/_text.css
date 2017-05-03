@@ -38,6 +38,14 @@
   color: $color-primary;
 }
 
+.txt-primary-color-lighten {
+  color: $jade-lighten;
+}
+
+.txt-warning-color {
+  color: $color-warning;
+}
+
 .txt-body-color {
   color: $body-color;
 }

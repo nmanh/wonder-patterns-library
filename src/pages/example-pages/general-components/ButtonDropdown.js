@@ -30,7 +30,7 @@ export class ButtonDropdown extends React.Component {
         onBlur={this.hideMenu}
       >
         <div className="btn btn_reset">
-          <i className="fa fa-ellipsis-h fa-2x txt-primary-color" />
+          <i className="fa fa-ellipsis-h fa-2x txt-primary-color-lighten" />
         </div>
         <div className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
           {['Thank', 'Bookmark', 'Edit', 'Delete'].map(item => (

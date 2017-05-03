@@ -5,7 +5,7 @@ import $ from 'jquery';
 import { ButtonDropdown } from '../general-components';
 import { Loader } from './Loader';
 
-const PostHasAnswer = ({ openAnswerModal }) => (
+const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
   <article className="ptxlg pbxlg hover">
     <div>
       {/* Tags */}
@@ -85,6 +85,62 @@ const PostHasAnswer = ({ openAnswerModal }) => (
         <ButtonDropdown />
       </div>
     </div>
+
+    {isShowComment && (
+      <div className="panel panel_special-border mtmd">
+        <div className="panel__body">
+
+          <div className="lf lf_align-middle lf_no-wrap mbmd">
+            <a href="#" className="mrsm lf_no-gas">
+              <img src="https://unsplash.it/40" className="img-circle" alt=""/>
+            </a>
+            <div className="lf_full-space mrsm">
+              <textarea rows="1" className="f__control"></textarea>
+            </div>
+            <div>
+              <button className="btn btn_warning">Submit</button>
+            </div>
+          </div>
+
+          <div className="lf lf_no-wrap mbmd">
+            <div className="mrsm lf_no-gas">
+              <img src="https://unsplash.it/40" className="img-circle" alt=""/>
+            </div>
+            <div className="lf_full-space mrsm">
+              <h4 className="txt-body-color mb-reset">John Doe</h4>
+              <div className="txt-small mbxs">12/12/2012</div>
+              <div className="mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eaque unde dolorem magnam.</div>
+
+              <button className="btn btn_reset txt-warning-color mrmd">Upvote</button>
+              <button className="btn btn_reset mrmd">Downvote</button>
+              <button className="btn btn_reset mrmd">Report</button>
+            </div>
+          </div>
+
+          <div className="lf lf_no-wrap">
+            <a href="#" className="mrsm lf_no-gas">
+              <img src="https://unsplash.it/40" className="img-circle" alt=""/>
+            </a>
+            <div className="lf_full-space mrsm">
+              <a href="#">
+                <h4 className="txt-body-color mb-reset">John Doe</h4>
+              </a>
+              <div className="txt-small mbxs">12/12/2012</div>
+              <div className="mbxs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eaque unde dolorem magnam.</div>
+
+              <button className="btn btn_reset txt-warning-color mrmd">Upvote</button>
+              <button className="btn btn_reset mrmd">Downvote</button>
+              <button className="btn btn_reset mrmd">Report</button>
+            </div>
+          </div>
+
+          <div className="txt-right">
+            <a href="#">More comments</a>
+          </div>
+
+        </div>
+      </div>
+    )}
   </article>
 )
 
@@ -284,7 +340,7 @@ const Divider = ({ helpCls }) => (
   <div className={helpCls ? `divider ${helpCls}` : 'divider'} />
 );
 
-  export const MainContent = ({ openAnswerModal, openAskModal }) => (
+export const MainContent = ({ openAnswerModal, openAskModal }) => (
   <div>
     <ul id="nav-tab" className="nav-tab mblg">
       <li role="presentation" className="nav-tab__item active">
@@ -295,6 +351,9 @@ const Divider = ({ helpCls }) => (
       </li>
       <li role="presentation" className="nav-tab__item">
         <a href="#" className="nav-tab__link">Cần trả lời</a>
+      </li>
+      <li role="presentation" className="nav-tab__item">
+        <a href="#" className="nav-tab__link">Bookmarks</a>
       </li>
     </ul>
 
@@ -312,7 +371,7 @@ const Divider = ({ helpCls }) => (
 
     <Divider />
 
-    <PostHasAnswer openAnswerModal={openAnswerModal} />
+    <PostHasAnswer openAnswerModal={openAnswerModal} isShowComment />
     <Divider />
     <PostHasAnswer openAnswerModal={openAnswerModal} />
     <Divider />

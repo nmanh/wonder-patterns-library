@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
 } from 'react-router-dom';
 import Home from './pages/Home';
 import GlobalStyles from './pages/GlobalStyles';

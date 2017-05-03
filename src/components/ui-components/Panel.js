@@ -108,7 +108,14 @@ const ContextualAlternatives = () => (
         <div className="panel__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tempora.</div>
       </div>
 
-      <div className="panel panel_special">
+      <div className="panel panel_special mbmd">
+        <div className="panel__heading">
+          <h3 className="panel__title">Panel title</h3>
+        </div>
+        <div className="panel__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tempora.</div>
+      </div>
+
+      <div className="panel panel_special-border">
         <div className="panel__heading">
           <h3 className="panel__title">Panel title</h3>
         </div>

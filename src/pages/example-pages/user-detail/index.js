@@ -91,7 +91,7 @@ class UserDetail extends React.Component {
               <a href="#" className="nav-tab-h__link">Blogs</a>
             </li>
             <li className="nav-tab-h__item">
-              <a href="#" className="nav-tab-h__link">Vocab builder</a>
+              <a href="#" className="nav-tab-h__link">Vocab list</a>
             </li>
             <li className="nav-tab-h__item">
               <a href="#" className="nav-tab-h__link">Followers</a>
