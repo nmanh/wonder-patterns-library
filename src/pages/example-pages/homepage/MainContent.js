@@ -43,7 +43,7 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
       <div className="lf lf_align-middle mbmd">
         <div className="lf_full-space">
           <a href="#" className="lf lf_align-middle">
-            <img src="https://unsplash.it/60" className="img-circle mrmd" alt="" />
+            <img src="https://unsplash.it/40" className="img-circle mrmd" alt="" />
             <div>
               <ul className="list-unstyled txt-body-color">
                 <li>Chibi, Học viên Yola</li>
@@ -365,7 +365,7 @@ export const MainContent = ({ openAnswerModal, openAskModal }) => (
         openAskModal();
       }}
     >
-      <img src="https://unsplash.it/60x60" className="img-circle mrlg" alt=""/>
+      <img src="https://unsplash.it/40x60" className="img-circle mrlg" alt=""/>
       <span>Hi Linh! Click vào đây để đặt câu hỏi nhé</span>
     </a>
 

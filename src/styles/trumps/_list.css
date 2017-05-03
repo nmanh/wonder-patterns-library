@@ -23,3 +23,31 @@
 
   @include reset-default-list-style;
 }
+
+.list-breadcrumb {
+
+  &__item {
+    display: inline-block;
+
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: $space-sm;
+    }
+  }
+
+  .btn {
+    size: 32px;
+    line-height: 30px;
+    background-color: transparent;
+    border: 2px solid transparent;
+
+    &.active,
+    &:hover {
+      border-color: $muted;
+      border-radius: 50%;
+    }
+  }
+
+  @include reset-default-list-style;
+}

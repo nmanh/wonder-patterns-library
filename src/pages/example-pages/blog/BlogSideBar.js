@@ -7,29 +7,37 @@ const TopBlogger = () => (
     </div>
     <div className="panel__body">
 
-      <a href="#" className="lf lf_align-middle lf_no-wrap txt-body-color mbmd">
-        <img src="https://unsplash.it/40x40" className="img-circle mrmd" alt="" />
+      <a href="#" className="lf lf_no-wrap txt-body-color mbmd">
+        <div className="mrmd lf_no-gas">
+          <img src="https://unsplash.it/40x40" className="img-circle" alt="" />
+        </div>
         <div>
           <div className="txt-bold">Tu Ngo</div>
           <div>CEO & Cofounder at Yola</div>
         </div>
       </a>
-      <a href="#" className="lf lf_align-middle lf_no-wrap txt-body-color mbmd">
-        <img src="https://unsplash.it/40x40" className="img-circle mrmd" alt="" />
+      <a href="#" className="lf lf_no-wrap txt-body-color mbmd">
+        <div className="mrmd lf_no-gas">
+          <img src="https://unsplash.it/40x40" className="img-circle" alt="" />
+        </div>
         <div>
           <div className="txt-bold">Lan Le, IELTS 8.5</div>
           <div>Upvoted 2.2k</div>
         </div>
       </a>
-      <a href="#" className="lf lf_align-middle lf_no-wrap txt-body-color mbmd">
-        <img src="https://unsplash.it/40x40" className="img-circle mrmd" alt="" />
+      <a href="#" className="lf lf_no-wrap txt-body-color mbmd">
+        <div className="mrmd lf_no-gas">
+          <img src="https://unsplash.it/40x40" className="img-circle" alt="" />
+        </div>
         <div>
           <div className="txt-bold">Tony Bui</div>
           <div>Cofounder at FundaMine</div>
         </div>
       </a>
-      <a href="#" className="lf lf_align-middle lf_no-wrap txt-body-color mbmd">
-        <img src="https://unsplash.it/40x40" className="img-circle mrmd" alt="" />
+      <a href="#" className="lf lf_no-wrap txt-body-color mbmd">
+        <div className="mrmd lf_no-gas">
+          <img src="https://unsplash.it/40x40" className="img-circle" alt="" />
+        </div>
         <div>
           <div className="txt-bold">Jane Miller</div>
           <div>Ila Teacher, 12k Followers</div>

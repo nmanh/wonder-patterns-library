@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 export const ModalHeader = ({ onRequestClose }) => (
   <div className="modal__header">
     <button
-      className="modal__btn-close"
+      className="modal__btn-close txt-muted"
       onClick={onRequestClose}
     >
       <i className="fa fa-times fa-lg"></i>

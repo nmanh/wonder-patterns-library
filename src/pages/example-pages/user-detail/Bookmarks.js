@@ -36,7 +36,7 @@ const BlogHasThumbnail = () => (
         <div className="lf lf_align-middle mbmd">
           <div className="lf_full-space">
             <a href="#" className="lf lf_align-middle">
-              <img src="https://unsplash.it/60" className="img-circle mrmd" alt="" />
+              <img src="https://unsplash.it/40" className="img-circle mrmd" alt="" />
               <div>
                 <ul className="list-unstyled txt-body-color">
                   <li>Tuan Pham, IELTS 8.0</li>
@@ -105,7 +105,7 @@ const Blog = () => (
         <div className="lf lf_align-middle mbmd">
           <div className="lf_full-space">
             <a href="#" className="lf lf_align-middle">
-              <img src="https://unsplash.it/60" className="img-circle mrmd" alt="" />
+              <img src="https://unsplash.it/40" className="img-circle mrmd" alt="" />
               <div>
                 <ul className="list-unstyled txt-body-color">
                   <li>Tuan Pham, IELTS 8.0</li>

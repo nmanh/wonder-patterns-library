@@ -15,7 +15,7 @@ const StaticModal = () => (
         <div className="modal__dialog" role="document">
           <div className="modal__content fade-in-down">
             <div className="modal__header">
-              <button className="modal__btn-close">
+              <button className="modal__btn-close txt-muted">
                 <i className="fa fa-times fa-lg"></i>
               </button>
             </div>
@@ -43,7 +43,7 @@ const StaticModal = () => (
             <div className="modal__content fade-in-down">
 
               <div className="modal__header">
-                <button className="modal__btn-close">
+                <button className="modal__btn-close txt-muted">
                   <i className="fa fa-times fa-lg"></i>
                 </button>
               </div>

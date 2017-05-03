@@ -96,14 +96,14 @@ export class Header extends React.Component {
             <NavLink to="/example-pages/vocab" className="nav__link">
               <i className="fa fa-edit" /> <span className="show-for-medium">Vocab</span>
             </NavLink>
-            <a href="#" className="nav__link">
+            <NavLink to="/example-pages/quiz-test" className="nav__link">
               <i className="fa fa-question-circle" /> <span className="show-for-medium">Quiz/Test</span>
-            </a>
+            </NavLink>
           </nav>
 
         </div>
 
-        <div className="app-header__ghost" style={{height: '60px'}} />
+        <div className="app-header__ghost" />
 
         {this.state.isShowBackdrop && (
           <div

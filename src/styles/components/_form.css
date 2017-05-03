@@ -36,6 +36,11 @@
       float: left;
     }
 
+    &_ig-border {
+      border: 2px solid rgba($color-primary, 0.3);
+      border-right: 0;
+    }
+
     /* input size */
 
     &_large {
@@ -92,20 +97,17 @@
   &__input-group {
     position: relative;
 
-    display: table;
-
-    clear: fix;
+    display: flex;
   }
 
   &__input-addon {
-    display: table-cell;
-    width: 1%;
     padding: $space-xs $space-md;
 
     white-space: nowrap;
     vertical-align: middle;
 
     background-color: $muted;
+    border: 0;
     border-radius: $radius;
   }
 }
