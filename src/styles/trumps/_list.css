@@ -32,7 +32,7 @@
     text-align: center;
 
     &:not(:last-child) {
-      margin-right: $space-sm;
+      margin-right: $space-xs;
     }
   }
 
@@ -50,4 +50,14 @@
   }
 
   @include reset-default-list-style;
+}
+
+.list-h-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  &.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }

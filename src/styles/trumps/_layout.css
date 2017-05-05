@@ -2,7 +2,7 @@
 
 .lf {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 
   &_full-space {
     flex-grow: 1;
@@ -12,8 +12,12 @@
     align-items: center;
   }
 
-  &_no-wrap {
-    flex-wrap: nowrap;
+  // &_no-wrap {
+  //   flex-wrap: nowrap;
+  // }
+
+  &_wrap {
+    flex-wrap: wrap;
   }
 
   /* no grow and shrink */

@@ -66,14 +66,6 @@
     border: 0;
   }
 
-  &__body {
-    min-height: calc(100vh - 33px - 61px);
-
-    @media (--medium-up) {
-      min-height: auto;
-    }
-  }
-
   &__footer {
     clear: fix;
     background-color: $muted;

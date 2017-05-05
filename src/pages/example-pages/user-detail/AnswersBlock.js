@@ -10,7 +10,7 @@ const Answers = () => (
     <article className="mbxlg">
       <div>
         {/* Tags */}
-        <div className="mbmd lf lf_no-wrap">
+        <div className="mbmd lf">
 
           <div className="lf_full-space">
             <div className="lf lf_align-middle">

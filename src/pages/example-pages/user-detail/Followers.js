@@ -11,7 +11,7 @@ class Followers extends React.Component {
             <div className="medium-6 columns" key={item}>
               <div className="panel mbmd">
                 <div className="panel__body">
-                  <div className="lf lf_align-middle lf_no-wrap">
+                  <div className="lf lf_align-middle">
                     <a href="#" className="mrmd">
                       <img src="https://unsplash.it/40" className="img-circle" alt="" />
                     </a>

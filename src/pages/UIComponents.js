@@ -16,6 +16,7 @@ import {
   Frame,
   Ribbon,
   Well,
+  Tag,
 } from '../components/ui-components';
 import { PLSubNav } from '../components/patterns-library';
 
@@ -76,6 +77,10 @@ class UIComponents extends React.Component {
           name: 'Well',
           url: `${props.match.url}/well`,
         },
+        {
+          name: 'Tag',
+          url: `${props.match.url}/tag`,
+        },
       ]
     }
   }
@@ -99,6 +104,7 @@ class UIComponents extends React.Component {
           <Route path={`${match.url}/frame`} component={Frame} />
           <Route path={`${match.url}/ribbon`} component={Ribbon} />
           <Route path={`${match.url}/well`} component={Well} />
+          <Route path={`${match.url}/tag`} component={Tag} />
           <Route path={match.url} render={() => (
             <h2>Overview</h2>
           )} />

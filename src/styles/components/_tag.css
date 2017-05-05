@@ -1,0 +1,19 @@
+.wtag {
+  display: inline-block;
+  padding: $space-xs $space-sm;
+
+  color: $body-color;
+  white-space: nowrap;
+
+  background-color: $alabaster;
+  border: 1px solid $muted;
+  border-radius: $space-md;
+
+  transition: background-color $transition-time $transition-effect;
+
+  &:hover {
+    color: $body-color;
+
+    background-color: darken($alabaster, 5%);
+  }
+}

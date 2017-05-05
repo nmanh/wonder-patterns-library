@@ -10,3 +10,4 @@ export { NavTabV } from './NavTabV';
 export { NavTabH } from './NavTabH';
 export { Ribbon } from './Ribbon';
 export { Well } from './Well';
+export { Tag } from './Tag';

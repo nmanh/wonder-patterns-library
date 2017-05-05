@@ -29,6 +29,10 @@
     border-top: 2px solid $muted;
 
     @include reset-default-list-style;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__item {

@@ -63,7 +63,7 @@
     label { /* stylelint-disable-line */
       padding-left: 20px;
 
-      font-weight: $font-weight-base;
+      font-weight: $font-weight-normal;
 
       cursor: pointer;
     }

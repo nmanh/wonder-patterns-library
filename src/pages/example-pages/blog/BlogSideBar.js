@@ -7,7 +7,7 @@ const TopBlogger = () => (
     </div>
     <div className="panel__body">
 
-      <a href="#" className="lf lf_no-wrap txt-body-color mbmd">
+      <a href="#" className="lf txt-body-color mbmd">
         <div className="mrmd lf_no-gas">
           <img src="https://unsplash.it/40x40" className="img-circle" alt="" />
         </div>
@@ -16,7 +16,7 @@ const TopBlogger = () => (
           <div>CEO & Cofounder at Yola</div>
         </div>
       </a>
-      <a href="#" className="lf lf_no-wrap txt-body-color mbmd">
+      <a href="#" className="lf txt-body-color mbmd">
         <div className="mrmd lf_no-gas">
           <img src="https://unsplash.it/40x40" className="img-circle" alt="" />
         </div>
@@ -25,7 +25,7 @@ const TopBlogger = () => (
           <div>Upvoted 2.2k</div>
         </div>
       </a>
-      <a href="#" className="lf lf_no-wrap txt-body-color mbmd">
+      <a href="#" className="lf txt-body-color mbmd">
         <div className="mrmd lf_no-gas">
           <img src="https://unsplash.it/40x40" className="img-circle" alt="" />
         </div>
@@ -34,7 +34,7 @@ const TopBlogger = () => (
           <div>Cofounder at FundaMine</div>
         </div>
       </a>
-      <a href="#" className="lf lf_no-wrap txt-body-color mbmd">
+      <a href="#" className="lf txt-body-color mbmd">
         <div className="mrmd lf_no-gas">
           <img src="https://unsplash.it/40x40" className="img-circle" alt="" />
         </div>

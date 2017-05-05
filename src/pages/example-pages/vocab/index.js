@@ -30,7 +30,7 @@ export default class Vocab extends React.Component {
           <section className="small-12 column">
             <h2>Word of the day</h2>
 
-            <div className="lf lf_no-wrap mbmd">
+            <div className="lf mbmd">
               <div className="lf_full-space">
                 <ul className="list-inline txt-primary-color">
                   <li>
@@ -115,7 +115,7 @@ export default class Vocab extends React.Component {
           <div className="row">
 
             <div className="small-12 column mbmd">
-              <div className="lf lf_no-wrap mbmd">
+              <div className="lf mbmd">
                 <h2 className="lf_full-space">My lists</h2>
                 <div>
                   <button className="btn btn_warning"><i className="fa fa-plus"></i> Build new list</button>
@@ -186,7 +186,7 @@ export default class Vocab extends React.Component {
                 <article className="ptxlg pbxlg hover">
                   <div>
                     {/* Tags */}
-                    <div className="mbmd lf lf_no-wrap">
+                    <div className="mbmd lf">
 
                       <div className="lf_full-space">
                         <div className="lf lf_align-middle">

@@ -1,26 +1,21 @@
 import React from 'react';
-import 'slick-carousel/slick/slick';
-import 'slick-carousel/slick/slick.css';
-import $ from 'jquery';
+import 'flickity/dist/flickity.css';
+import Flickity from 'flickity/dist/flickity.pkgd.js';
 import { ButtonDropdown } from '../general-components';
 import { Loader } from './Loader';
 
 const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
-  <article className="ptxlg pbxlg hover">
+  <article className="medium-ptmd medium-pbmd ptxlg pbxlg hover">
     <div>
       {/* Tags */}
-      <div className="mbmd lf lf_no-wrap">
+      <div className="mbmd lf">
 
         <div className="lf_full-space">
           <div className="lf lf_align-middle">
             <div className="mrmd">
-              <button className="btn btn_primary mrsm mbxs">Kỹ năng nghe</button>
-              <button className="btn btn_primary mrsm mbxs">IELTS 5.0</button>
+              <button className="wtag mrsm">Kỹ năng nghe</button>
+              <button className="wtag mrsm">IELTS 5.0</button>
             </div>
-            <ul className="lf_full-space list-inline txt-muted mbxs">
-              <li>1 trả lời</li>
-              <li>18 lượt xem</li>
-            </ul>
           </div>
         </div>
 
@@ -40,23 +35,17 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
 
     <div>
       {/* Answer's author */}
-      <div className="lf lf_align-middle mbmd">
-        <div className="lf_full-space">
-          <a href="#" className="lf lf_align-middle">
-            <img src="https://unsplash.it/40" className="img-circle mrmd" alt="" />
-            <div>
-              <ul className="list-unstyled txt-body-color">
-                <li>Chibi, Học viên Yola</li>
-                <li>Trả lời 1 tiếng trước</li>
-              </ul>
-            </div>
-          </a>
+      <a href="#" className="lf mbmd">
+        <div className="lf_no-gas">
+          <img src="https://unsplash.it/40" className="img-circle mrmd" alt="" />
         </div>
-
-        <a href="#">
-          <i className="fa fa-user-plus fa-2x" />
-        </a>
-      </div>
+        <div>
+          <ul className="list-unstyled txt-body-color">
+            <li className="mbsm txt-ellipsis-2-lines">Phan Hương, Là con gái cả của ông trùm Phan Quân. Trước đây, ngoài sở thích phi dao, Hương là cô gái biết nghe lời bố mẹ và ít khi làm “Người phán xử” phải phiền lòng.</li>
+            <li>Trả lời 1 tiếng trước</li>
+          </ul>
+        </div>
+      </a>
     </div>
 
     <div className="mbmd">
@@ -77,9 +66,9 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
       <div className="lf lf_align-middle">
 
         <div className="lf_full-space">
-          <button className="btn btn_warning mrmd">Upvote 2</button>
-          <a href="#" className="txt-muted mrmd">Downvote</a>
-          <a href="#" className="txt-muted mrmd">Bình luận (4)</a>
+          <button className="btn btn_reset txt-muted mrmd">Upvote (2)</button>
+          <button className="btn btn_reset txt-muted mrmd">Downvote</button>
+          <button className="btn btn_reset txt-muted mrmd">Bình luận (4)</button>
         </div>
 
         <ButtonDropdown />
@@ -90,7 +79,7 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
       <div className="panel panel_special-border mtmd">
         <div className="panel__body">
 
-          <div className="lf lf_align-middle lf_no-wrap mbmd">
+          <div className="lf mbmd">
             <a href="#" className="mrsm lf_no-gas">
               <img src="https://unsplash.it/40" className="img-circle" alt=""/>
             </a>
@@ -102,7 +91,7 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
             </div>
           </div>
 
-          <div className="lf lf_no-wrap mbmd">
+          <div className="lf mbmd">
             <div className="mrsm lf_no-gas">
               <img src="https://unsplash.it/40" className="img-circle" alt=""/>
             </div>
@@ -117,7 +106,7 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
             </div>
           </div>
 
-          <div className="lf lf_no-wrap">
+          <div className="lf">
             <a href="#" className="mrsm lf_no-gas">
               <img src="https://unsplash.it/40" className="img-circle" alt=""/>
             </a>
@@ -144,19 +133,43 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
   </article>
 )
 
+// class TagHorizontalList extends React.Component {
+//   componentDidMount() {
+//     new Flickity(this.tagList, {
+//       freeScroll: true,
+//       contain: true,
+//       prevNextButtons: false,
+//       pageDots: false,
+//       // resize: false,
+//       percentPosition: false,
+//     });
+//   }
+//
+//   render() {
+//     return (
+//       <div className="mrlg lf_full-space" ref={(ref) => this.tagList = ref}>
+//         <button className="wtag mrsm">Kỹ năng nghe</button>
+//         <button className="wtag mrsm">IELTS 5.0</button>
+//         <button className="wtag mrsm">Very loooooooooooong tag</button>
+//         <button className="wtag mrsm">Jessica Alba</button>
+//         <button className="wtag mrsm">Adam Levine</button>
+//       </div>
+//     )
+//   }
+// }
+
 const PostNoAnswer = () => (
-  <article className="ptxlg pbxlg hover">
+  <article className="medium-ptmd medium-pbmd ptxlg pbxlg hover">
     <div>
       {/* Tags */}
       <div className="lf lf_align-middle mbmd">
-        <div className="mrlg">
-          <button className="btn btn_primary mrsm mbxs">Kỹ năng nghe</button>
-          <button className="btn btn_primary mrsm mbxs">IELTS 5.0</button>
+        <div className="mrlg lf_full-space list-h-scroll no-scrollbar">
+          <button className="wtag mrsm">Kỹ năng nghe</button>
+          <button className="wtag mrsm">IELTS 5.0</button>
+          <button className="wtag mrsm">Very loooooooooooong tag</button>
+          <button className="wtag mrsm">Jessica Alba</button>
+          <button className="wtag mrsm">Adam Levine</button>
         </div>
-        <ul className="lf_full-space list-inline txt-muted mbxs">
-          <li>1 trả lời</li>
-          <li>18 lượt xem</li>
-        </ul>
         <button className="btn btn_special mbxs">Q&A</button>
       </div>
     </div>
@@ -174,7 +187,7 @@ const PostNoAnswer = () => (
       <div className="lf lf_align-middle">
 
         <div className="lf_full-space">
-          <button className="btn btn_warning mrmd">Trả lời</button>
+          <button className="btn btn_reset txt-muted mrmd">Trả lời</button>
           <a href="#" className="txt-muted mrmd">Downvote</a>
         </div>
 
@@ -185,35 +198,22 @@ const PostNoAnswer = () => (
 );
 
 class LiveSession extends React.Component {
-  constructor() {
-    super();
-
-    this.goToPrevSlide = this.goToPrevSlide.bind(this);
-    this.goToNextSlide = this.goToNextSlide.bind(this);
-  }
-
   componentDidMount() {
-    // initial carousel
-    $(this.slider).slick({
-      slidesToShow: 3,
-      centerPadding: '16px',
-      infinite: false,
-      arrows: false,
+    // flickity carousel
+    new Flickity( this.slider, {
+      // options
+      cellAlign: 'left',
+      freeScroll: true,
+      pageDots: false,
+      groupCells: true,
+      contain: true,
     });
-  }
-
-  goToPrevSlide() {
-    $(this.slider).slick('slickPrev');
-  }
-
-  goToNextSlide() {
-    $(this.slider).slick('slickNext');
   }
 
   render() {
     return (
-      <div className="ptxlg pbxlg">
-        <div className="lf lf_no-wrap lf_align-middle mbmd">
+      <div className="medium-ptmd medium-pbmd ptxlg pbxlg">
+        <div className="lf lf_align-middle mbmd">
           <div className="lf_full-space mrmd">
             <span className="txt-large">Suggessted by Wonder</span>
           </div>
@@ -223,36 +223,22 @@ class LiveSession extends React.Component {
           </div>
         </div>
 
-        <div className="carousel">
-          <div ref={(ref) => this.slider = ref}>
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <a href="#" className="txt-center" key={item}>
-                <img
-                  src="https://unsplash.it/100"
-                  className="img-circle mbmd"
-                  alt=""
-                />
-                <div className="txt-bold txt-body-color">Ms. Lisa Chan</div>
-                <div className="txt-body-color">Communicate English<br />on</div>
-                <div className="txt-bold txt-uppercase txt-body-color">IELTS 6.0 Writing</div>
-                <div>now broadcasting</div>
-              </a>
-            ))}
-          </div>
-          <button
-            className="carousel__narrow carousel__narrow_prev"
-            ref={(ref) => this.narrowPrev = ref}
-            onClick={this.goToPrevSlide}
-          >
-            <i className="fa fa-chevron-left fa-lg" />
-          </button>
-          <button
-            className="carousel__narrow carousel__narrow_next"
-            ref={(ref) => this.narrowNext = ref}
-            onClick={this.goToNextSlide}
-          >
-            <i className="fa fa-chevron-right fa-lg" />
-          </button>
+        <div ref={ref => this.slider = ref}>
+          {[1, 2, 3, 4, 5, 6].map(item => (
+            <a href="#" className="txt-center" key={item} style={{display: 'block', width: '180px'}}>
+              <img
+                src="https://unsplash.it/100"
+                className="img-circle mbmd"
+                alt=""
+                width="100"
+                height="100"
+              />
+              <div className="txt-bold txt-body-color">Ms. Lisa Chan</div>
+              <div className="txt-body-color">Communicate English<br />on</div>
+              <div className="txt-bold txt-uppercase txt-body-color">IELTS 6.0 Writing</div>
+              <div>now broadcasting</div>
+            </a>
+          ))}
         </div>
       </div>
     );
@@ -260,35 +246,22 @@ class LiveSession extends React.Component {
 }
 
 class QuizTest extends React.Component {
-  constructor() {
-    super();
-
-    this.goToPrevSlide = this.goToPrevSlide.bind(this);
-    this.goToNextSlide = this.goToNextSlide.bind(this);
-  }
-
   componentDidMount() {
-    // initial carousel
-    $(this.slider).slick({
-      slidesToShow: 3,
-      centerPadding: '16px',
-      infinite: false,
-      arrows: false,
+    // flickity carousel
+    new Flickity( this.slider, {
+      // options
+      cellAlign: 'left',
+      freeScroll: true,
+      pageDots: false,
+      groupCells: true,
+      contain: true,
     });
-  }
-
-  goToPrevSlide() {
-    $(this.slider).slick('slickPrev');
-  }
-
-  goToNextSlide() {
-    $(this.slider).slick('slickNext');
   }
 
   render() {
     return (
-      <div className="ptxlg pbxlg">
-        <div className="lf lf_no-wrap lf_align-middle mbmd">
+      <div className="medium-ptmd medium-pbmd ptxlg pbxlg">
+        <div className="lf lf_align-middle mbmd">
           <div className="lf_full-space mrmd">
             <span className="txt-large">Suggessted by Wonder</span>
           </div>
@@ -301,7 +274,7 @@ class QuizTest extends React.Component {
         <div className="carousel">
           <div ref={(ref) => this.slider = ref}>
             {[1, 2, 3, 4, 5, 6].map(item => (
-              <div className="panel txt-center mlsm mrsm" key={item}>
+              <div className="panel txt-center mlsm mrsm" key={item} style={{width: '200px'}}>
                 <div className="panel__heading">
                   <h3 className="panel__title">Quiz Test</h3>
                 </div>
@@ -316,20 +289,6 @@ class QuizTest extends React.Component {
               </div>
             ))}
           </div>
-          <button
-            className="carousel__narrow carousel__narrow_prev"
-            ref={(ref) => this.narrowPrev = ref}
-            onClick={this.goToPrevSlide}
-          >
-            <i className="fa fa-chevron-left fa-lg" />
-          </button>
-          <button
-            className="carousel__narrow carousel__narrow_next"
-            ref={(ref) => this.narrowNext = ref}
-            onClick={this.goToNextSlide}
-          >
-            <i className="fa fa-chevron-right fa-lg" />
-          </button>
         </div>
       </div>
     );
@@ -359,7 +318,7 @@ export const MainContent = ({ openAnswerModal, openAskModal }) => (
 
     <a
       href="#"
-      className="lf lf_align-middle lf_no-wrap mblg"
+      className="lf lf_align-middle mblg"
       onClick={(e) => {
         e.preventDefault();
         openAskModal();

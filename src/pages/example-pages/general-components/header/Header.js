@@ -43,7 +43,7 @@ export class Header extends React.Component {
       <header className={cls}>
         <div className="app-header__main">
 
-          <div className="row column lf lf_no-wrap lf_align-middle large-mbsm mblg">
+          <div className="row column lf lf_align-middle large-mbsm mblg">
 
             <Link to="/example-pages/homepage" className="app-header__logo medium-mrsm mrmd">
               <h1 className="mb-reset show-for-medium">Wonder</h1>
@@ -52,7 +52,7 @@ export class Header extends React.Component {
 
             <div className="app-header__action-box medium-mrmd mrlg">
 
-              <div className="lf lf_no-wrap">
+              <div className="lf">
 
                 <SearchForm
                   showBackdrop={this.showBackdrop}
