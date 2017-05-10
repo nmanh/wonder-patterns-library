@@ -2,7 +2,7 @@
   background-color: $white;
   border-radius: $radius;
 
-  @include border($muted);
+  @include border($border-color);
 
   &__body {
     padding: $space-md;
@@ -41,7 +41,7 @@
   &_special-border {
     background-color: $alabaster;
 
-    @include border($muted);
+    @include border($border-color);
 
     .panel__heading {
       text-transform: uppercase;

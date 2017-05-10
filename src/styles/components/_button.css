@@ -9,12 +9,12 @@
   vertical-align: middle;
 
   cursor: pointer;
-  background-color: $white;
+  background-color: darken($alabaster, 5%);
   border-radius: $radius;
 
   transition: background-color $transition-time $transition-effect;
 
-  @include border($border-color);
+  @include border(darken($border-color, 10%));
 
   &.active,
   &:hover {
@@ -39,6 +39,7 @@
   &_special {
     color: $color-primary;
 
+    background-color: $white;
     border: 1px solid $color-primary;
     border-radius: $radius;
 
@@ -61,6 +62,10 @@
       background-color: $color-warning;
     }
   }
+
+  // &_faded {
+  //   opacity: $opac
+  // }
 
   &_large {
     padding: $space-sm $space-xlg;
@@ -144,7 +149,7 @@
 
     transition: opacity $transition-time $transition-effect;
 
-    @include border($muted);
+    @include border($border-color);
 
     &.open {
       visibility: visible;

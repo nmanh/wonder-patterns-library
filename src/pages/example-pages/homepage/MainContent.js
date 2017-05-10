@@ -20,7 +20,7 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
         </div>
 
         <div>
-          <button className="btn btn_special mbxs">Q&A</button>
+          <button className="btn btn_special">Q&A</button>
         </div>
 
       </div>
@@ -66,9 +66,9 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
       <div className="lf lf_align-middle">
 
         <div className="lf_full-space">
-          <button className="btn btn_reset txt-muted mrmd">Upvote (2)</button>
-          <button className="btn btn_reset txt-muted mrmd">Downvote</button>
-          <button className="btn btn_reset txt-muted mrmd">Bình luận (4)</button>
+          <button className="btn mrmd txt-small">Upvote | 9</button>
+          <button className="btn btn_reset txt-small txt-muted mrmd">Downvote</button>
+          <button className="btn btn_reset txt-small txt-muted mrmd">Bình luận</button>
         </div>
 
         <ButtonDropdown />
@@ -87,7 +87,7 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
               <textarea rows="1" className="f__control"></textarea>
             </div>
             <div>
-              <button className="btn btn_warning">Submit</button>
+              <button className="btn">Submit</button>
             </div>
           </div>
 

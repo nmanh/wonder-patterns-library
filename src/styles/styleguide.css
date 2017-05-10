@@ -51,7 +51,7 @@
 
 .pt-wrapper {
   margin-bottom: 32px;
-  border: 1px solid $muted;
+  border: 1px solid $border-color;
   border-radius: $radius;
 }
 

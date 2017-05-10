@@ -15,9 +15,12 @@
   font-size: 14px;
 }
 
+.txt-xsmall {
+  font-size: $base;
+}
+
 .txt-muted {
-  // color: $muted;
-  color: #7d7d7d; // ask this later
+  color: $muted;
 }
 
 .txt-bold {

@@ -13,11 +13,39 @@
 
 .list-underline {
 
-  li { /* stylelint-disable-line */
+  > li { /* stylelint-disable-line */
     padding: $space-sm $space-md;
 
     &:not(:last-child) {
       border-bottom: 1px solid $muted;
+    }
+  }
+
+  @include reset-default-list-style;
+}
+
+.list-inline-2 {
+
+  li { /* stylelint-disable-line */
+    display: inline-flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: $space-sm;
+    }
+
+    &::after {
+      display: inline-block;
+      margin-left: $space-sm;
+      content: "";
+      size: $space-xs;
+
+      background-color: $muted;
+      border-radius: 50%;
+    }
+
+    &:last-child::after {
+      display: none;
     }
   }
 

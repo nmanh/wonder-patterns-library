@@ -6,7 +6,7 @@
   white-space: nowrap;
 
   background-color: $alabaster;
-  border: 1px solid $muted;
+  border: 1px solid $border-color;
   border-radius: $space-md;
 
   transition: background-color $transition-time $transition-effect;

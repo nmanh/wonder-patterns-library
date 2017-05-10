@@ -20,8 +20,8 @@ $row-width: 992px;
 /* 2. Colors */
 $emperor: #514f4f;
 $white: #fff;
-$silver: #ccc;
-$mercury: #e3e2e1;
+$silver: #999;
+$mercury: #ebebeb;
 
 $jade: #02a876;
 $jade-lighten: rgba($jade, 0.4);

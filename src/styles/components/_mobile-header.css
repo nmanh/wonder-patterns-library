@@ -1,0 +1,22 @@
+.app-mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-xs 10px;
+
+  background-color: $color-primary;
+
+  &__item,
+  &__logo {
+    flex-grow: 1;
+    color: $white;
+  }
+
+  &__logo {
+    text-align: center;
+  }
+
+  &__heading {
+    margin: 0;
+  }
+}

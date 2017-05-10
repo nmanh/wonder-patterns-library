@@ -156,6 +156,10 @@ const List = () => {
           <strong>List inline</strong>
           <Ul className="list-inline" />
         </div>
+        <div className="mbmd">
+          <strong>List inline 2</strong>
+          <Ul className="list-inline-2" />
+        </div>
       </PLExample>
       <PLCodeBlock>
         {`
