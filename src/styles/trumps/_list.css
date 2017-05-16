@@ -17,7 +17,7 @@
     padding: $space-sm $space-md;
 
     &:not(:last-child) {
-      border-bottom: 1px solid $muted;
+      border-bottom: 1px solid $border-color;
     }
   }
 

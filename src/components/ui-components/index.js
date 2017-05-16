@@ -11,3 +11,5 @@ export { NavTabH } from './NavTabH';
 export { Ribbon } from './Ribbon';
 export { Well } from './Well';
 export { Tag } from './Tag';
+export { Mask } from './Mask';
+export { WonderAutoSuggest } from './WonderAutoSuggest';

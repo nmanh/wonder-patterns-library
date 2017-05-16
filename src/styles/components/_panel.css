@@ -12,7 +12,7 @@
   &__footer {
     padding: $space-sm $space-md;
 
-    background-color: lighten($muted, 10%);
+    background-color: $border-color;
   }
 
   &__title {

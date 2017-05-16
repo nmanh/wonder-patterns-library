@@ -13,7 +13,7 @@
     flex: 1;
     padding: $space-md $space-xs;
 
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-base;
     line-height: 1;
 
     color: $white;

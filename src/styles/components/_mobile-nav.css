@@ -3,7 +3,7 @@
 
   &__link {
     padding: $space-xs;
-    flex-grow: 1;
+    flex: 1;
 
     color: $white;
     text-align: center;
@@ -20,7 +20,8 @@
   }
 
   &__title {
-    font-size: $font-size-h6;
+    // font-size: $font-size-h6;
+    font-size: 12px;
   }
 
   &__icon-wrap {

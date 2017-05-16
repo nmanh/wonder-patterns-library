@@ -8,11 +8,15 @@
 
   &__item,
   &__logo {
-    flex-grow: 1;
     color: $white;
   }
 
+  &__item {
+    flex: 1;
+  }
+
   &__logo {
+    flex: 2;
     text-align: center;
   }
 

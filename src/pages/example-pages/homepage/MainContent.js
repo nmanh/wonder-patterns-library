@@ -5,7 +5,7 @@ import { ButtonDropdown } from '../general-components';
 import { Loader } from './Loader';
 
 const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
-  <article className="medium-ptmd medium-pbmd ptxlg pbxlg hover">
+  <article className="medium-ptmd medium-pbmd ptxlg pbxlg">
     <div>
       {/* Tags */}
       <div className="mbmd lf">
@@ -159,7 +159,7 @@ const PostHasAnswer = ({ openAnswerModal, isShowComment }) => (
 // }
 
 const PostNoAnswer = () => (
-  <article className="medium-ptmd medium-pbmd ptxlg pbxlg hover">
+  <article className="medium-ptmd medium-pbmd ptxlg pbxlg">
     <div>
       {/* Tags */}
       <div className="lf lf_align-middle mbmd">
@@ -301,20 +301,22 @@ const Divider = ({ helpCls }) => (
 
 export const MainContent = ({ openAnswerModal, openAskModal }) => (
   <div>
-    <ul id="nav-tab" className="nav-tab mblg">
-      <li role="presentation" className="nav-tab__item active">
-        <a href="#" className="nav-tab__link">Dành cho bạn</a>
-      </li>
-      <li role="presentation" className="nav-tab__item">
-        <a href="#" className="nav-tab__link">Nội dung HOT</a>
-      </li>
-      <li role="presentation" className="nav-tab__item">
-        <a href="#" className="nav-tab__link">Cần trả lời</a>
-      </li>
-      <li role="presentation" className="nav-tab__item">
-        <a href="#" className="nav-tab__link">Bookmarks</a>
-      </li>
-    </ul>
+    <div className="nav-tab">
+      <ul id="nav-tab" className="nav-tab__list mblg">
+        <li role="presentation" className="nav-tab__item active">
+          <a href="#" className="nav-tab__link">Dành cho bạn</a>
+        </li>
+        <li role="presentation" className="nav-tab__item">
+          <a href="#" className="nav-tab__link">Nội dung HOT</a>
+        </li>
+        <li role="presentation" className="nav-tab__item">
+          <a href="#" className="nav-tab__link">Cần trả lời</a>
+        </li>
+        <li role="presentation" className="nav-tab__item">
+          <a href="#" className="nav-tab__link">Bookmarks</a>
+        </li>
+      </ul>
+    </div>
 
     <a
       href="#"

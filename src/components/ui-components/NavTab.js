@@ -56,24 +56,27 @@ class Example extends React.Component {
       <PLWrapper>
         <PLHeading text="Example" />
         <PLExample>
-          <ul id="nav-tab" className="nav-tab">
-            {this.state.tabs.map((item, index) => (
-              <li
-                key={item.name}
-                role="presentation"
-                className={item.isActive ? 'nav-tab__item active' : 'nav-tab__item'}
-                onClick={this.setTabActive}
-              >
-                <a
-                  href="#"
-                  className="nav-tab__link"
-                  onClick={(e) => {
-                    e.preventDefault();
-                  }}
-                >{item.name}</a>
-              </li>
-            ))}
-          </ul>
+          <div className="nav-tab">
+            <ul id="nav-tab" className="nav-tab__list">
+              {this.state.tabs.map((item, index) => (
+                <li
+                  key={item.name}
+                  role="presentation"
+                  className={item.isActive ? 'nav-tab__item active' : 'nav-tab__item'}
+                  onClick={this.setTabActive}
+                >
+                  <a
+                    href="#"
+                    className="nav-tab__link"
+                    onClick={(e) => {
+                      e.preventDefault();
+                    }}
+                    >{item.name}</a>
+                  </li>
+                ))}
+              </ul>
+              <div className="nav-tab__shadow" />
+          </div>
         </PLExample>
         <PLCodeBlock>
           {`

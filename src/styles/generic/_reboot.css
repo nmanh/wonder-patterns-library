@@ -41,7 +41,7 @@ body {
 
   font-family: $font-family-body;
   font-size: $font-size-base;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-base;
   line-height: $line-height-base;
 
   color: $body-color;
@@ -58,7 +58,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: $space-sm;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-normal;
 }
 
 p {
@@ -68,7 +68,7 @@ p {
 
 ol,
 ul {
-  padding-left: $space-lg;
+  padding-left: 1.1rem;
 }
 
 ol,
@@ -144,7 +144,7 @@ textarea,
 optgroup {
   font-size: $font-size-base;
   font-family: $font-family-body;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-base;
   line-height: inherit;
 
   &[disabled] {

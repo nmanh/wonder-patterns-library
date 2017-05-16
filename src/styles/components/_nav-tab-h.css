@@ -26,7 +26,7 @@
     white-space: nowrap;
 
     background-color: lighten($color-primary, 65%);
-    border-top: 2px solid $muted;
+    border-top: 2px solid $border-color;
 
     @include reset-default-list-style;
 

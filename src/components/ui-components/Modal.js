@@ -115,11 +115,11 @@ class LiveDemo extends React.Component {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="modal__content fade-in-down">
-                <div className="modal__header">
+                <div className="modal__header modal__header_2">
                   <h3 className="modal__title">Modal example</h3>
 
                   <button
-                    className="modal__btn-close"
+                    className="modal__btn-close txt-white"
                     onClick={this.hideModal}
                   >
                     <i className="fa fa-times"></i>

@@ -222,6 +222,46 @@ class ButtonDropdown extends React.Component {
   }
 }
 
+const ButtonSocial = () => (
+  <PLWrapper>
+    <PLHeading text="Button split" />
+    <PLExample>
+      <div className="mbmd">
+        <button className="btn-social btn-social_fb">
+          <div className="btn-social__addon">
+            <i className="fa fa-facebook fa-2x"></i>
+          </div>
+          <div className="btn-social__text">
+            Login with Facebook
+          </div>
+        </button>
+      </div>
+      <div className="mbmd">
+        <button className="btn-social btn-social_gg">
+          <div className="btn-social__addon">
+            <i className="fa fa-google-plus fa-2x"></i>
+          </div>
+          <div className="btn-social__text">
+            Login with Google+
+          </div>
+        </button>
+      </div>
+    </PLExample>
+    <PLCodeBlock>
+      {`
+        <button className="btn-social btn-social_fb">
+          <div className="btn-social__addon">
+            <i className="fa fa-facebook fa-2x"></i>
+          </div>
+          <div className="btn-social__text">
+            Login with Facebook
+          </div>
+        </button>
+      `}
+    </PLCodeBlock>
+  </PLWrapper>
+)
+
 export const Buttons = () => (
   <div>
     <PLSectionHeading text="Buttons" />
@@ -232,5 +272,6 @@ export const Buttons = () => (
     <Disable />
     <ButtonDropdown />
     <ButtonSplit />
+    <ButtonSocial />
   </div>
 );

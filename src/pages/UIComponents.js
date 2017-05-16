@@ -17,6 +17,8 @@ import {
   Ribbon,
   Well,
   Tag,
+  Mask,
+  WonderAutoSuggest,
 } from '../components/ui-components';
 import { PLSubNav } from '../components/patterns-library';
 
@@ -81,6 +83,14 @@ class UIComponents extends React.Component {
           name: 'Tag',
           url: `${props.match.url}/tag`,
         },
+        {
+          name: 'Mask',
+          url: `${props.match.url}/mask`,
+        },
+        {
+          name: 'AutoSuggest',
+          url: `${props.match.url}/auto-suggest`,
+        },
       ]
     }
   }
@@ -105,6 +115,8 @@ class UIComponents extends React.Component {
           <Route path={`${match.url}/ribbon`} component={Ribbon} />
           <Route path={`${match.url}/well`} component={Well} />
           <Route path={`${match.url}/tag`} component={Tag} />
+          <Route path={`${match.url}/mask`} component={Mask} />
+          <Route path={`${match.url}/auto-suggest`} component={WonderAutoSuggest} />
           <Route path={match.url} render={() => (
             <h2>Overview</h2>
           )} />

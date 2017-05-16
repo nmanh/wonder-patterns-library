@@ -13,11 +13,16 @@ export const Tag = () => (
     <PLWrapper>
       <PLHeading text="Tag" />
       <PLExample>
-        <a href="#" className="wtag">IELTS 5.0</a>
+        <div className="mbmd">
+          <a href="#" className="wtag">IELTS 5.0</a>
+        </div>
+        <div>
+          <div className="wtag-2">Q&A</div>
+        </div>
       </PLExample>
       <PLCodeBlock>
         {`
-          <a href="#" className="wtag">IELTS 5.0</a>          
+          <a href="#" className="wtag">IELTS 5.0</a>
         `}
       </PLCodeBlock>
     </PLWrapper>

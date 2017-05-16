@@ -32,6 +32,7 @@
     "postcss-pxtorem": "^4.0.0",
     "postcss-short-size": "^2.0.1",
     "postcss-triangle": "^1.0.1",
+    "react-autosuggest": "^9.0.1",
     "react-scripts": "0.9.5",
     "rucksack-css": "^0.9.1",
     "run-sequence": "^1.2.2",

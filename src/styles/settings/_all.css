@@ -21,7 +21,7 @@ $row-width: 992px;
 $emperor: #514f4f;
 $white: #fff;
 $silver: #999;
-$mercury: #ebebeb;
+$mercury: #e3e2e1;
 
 $jade: #02a876;
 $jade-lighten: rgba($jade, 0.4);
@@ -44,6 +44,9 @@ $body-bg: $white;
 $body-color: $emperor;
 $link-color: $color-primary;
 $muted: $silver;
+
+$color-facebook: #3b5998;
+$color-google-plus: #dd4b39;
 
 /* 3. Typography */
 $font-sans-serif: "Roboto", sans-serif;

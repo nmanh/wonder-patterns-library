@@ -28,6 +28,10 @@
       height: auto;
       margin: ($base * 10) auto;
     }
+
+    &_small {
+      max-width: ($base * 60);
+    }
   }
 
   &__content {
@@ -45,7 +49,6 @@
       height: auto;
       border-radius: $radius;
       box-shadow: 0 0 2px 2px rgba($body-color, 0.2);
-      @include border($muted);
     }
   }
 
@@ -55,12 +58,30 @@
   }
 
   &__header {
-    clear: fix;
+    display: flex;
+    align-items: center;
+    padding: $space-md $space-md;
+
+    border-bottom: 1px solid $border-color;
+    border-radius: $radius $radius 0 0;
+
+    &_2 {
+      color: $white;
+
+      background-color: $color-primary;
+      border-bottom: 0;
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+    margin: 0;
+
+    font-weight: $font-weight-normal;
   }
 
   &__btn-close {
-    float: right;
-    padding: $space-sm $space-md;
+    padding-left: $space-sm;
 
     background-color: transparent;
     border: 0;
@@ -68,8 +89,8 @@
 
   &__footer {
     clear: fix;
-    background-color: $muted;
-    border-top: 1px solid $muted;
+    background-color: $border-color;
+    border-radius: 0 0 $radius $radius;
   }
 
   // only use in styleguide
