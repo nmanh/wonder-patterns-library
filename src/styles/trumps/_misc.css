@@ -17,3 +17,16 @@
 .c-pointer {
   cursor: pointer;
 }
+
+.pos {
+  position: relative;
+
+  &__item {
+    position: absolute;
+
+    &_rb {
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

@@ -17,6 +17,8 @@
 
   &__title {
     margin-bottom: 0;
+
+    font-weight: $font-weight-normal;
   }
 
   &__footer {
