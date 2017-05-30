@@ -3,7 +3,7 @@
   &__line {
     height: $space-md;
 
-    background-color: $muted;
+    background-color: $border-color;
     border-radius: $radius;
 
     animation: bubble 1.5s infinite;
@@ -31,14 +31,14 @@
 @keyframes bubble {
 
   0% {
-    background-color: $muted;
+    background-color: $border-color;
   }
 
   50% {
-    background-color: lighten($muted, 10%);
+    background-color: lighten($border-color, 6%);
   }
 
   100% {
-    background-color: $muted;
+    background-color: $border-color;
   }
 }

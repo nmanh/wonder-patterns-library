@@ -93,7 +93,7 @@
 
 .txt-ellipsis-1-lines {
   display: -webkit-box; /* stylelint-disable-line */
-  max-height: $line-height-base;
+  max-height: ($line-height-base * 1rem);
   overflow: hidden;
 
   line-height: $line-height-base;
@@ -104,7 +104,7 @@
 
 .txt-ellipsis-2-lines {
   display: -webkit-box; /* stylelint-disable-line */
-  max-height: ($line-height-base * 2);
+  max-height: ($line-height-base * 2 * 1rem);
   overflow: hidden;
 
   line-height: $line-height-base;

@@ -38,6 +38,7 @@ html {
 /* 2. Body */
 body {
   margin: 0;
+  overflow-y: scroll;
 
   font-family: $font-family-body;
   font-size: $font-size-base;

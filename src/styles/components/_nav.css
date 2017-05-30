@@ -28,7 +28,7 @@
     }
 
     @media (--medium-up) {
-      padding: $space-lg $space-sm;
+      padding: $space-md $space-sm;
     }
   }
 }

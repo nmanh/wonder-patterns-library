@@ -1,4 +1,5 @@
 import React from 'react';
+import onClickOutside from 'react-onclickoutside'
 import {
   PLWrapper,
   PLSectionHeading,
@@ -141,7 +142,7 @@ const ButtonSplit = () => (
   </PLWrapper>
 );
 
-class ButtonDropdown extends React.Component {
+class Dropdown extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -161,66 +162,69 @@ class ButtonDropdown extends React.Component {
     this.setState({ isMenuOpen: false });
   }
 
+  handleClickOutside() {
+    this.hideMenu();
+  }
+
   render() {
     return (
-      <PLWrapper>
-        <PLHeading text="Button Dropdown" />
-        <PLExample>
-          <a
-            href="#"
-            className="btn-dropdown"
-            onClick={this.toggleMenu}
-            onBlur={this.hideMenu}
-          >
-            <div className="btn btn-dropdown__btn">
-              Button <i className="fa fa-caret-down"></i>
-            </div>
-            <div className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
-              {['Thank', 'Bookmark', 'Edit', 'Delete'].map(item => (
-                <button
-                  key={item}
-                  className="btn-dropdown__item"
-                  onMouseDown={(e) => {
-                    e.preventDefault();
-                  }}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    e.preventDefault();
-                  }}
-                  >
-                    {item}
-                  </button>
-              ))}
-            </div>
-          </a>
-        </PLExample>
-        <PLCodeBlock>
-          {`
-            <a href="#" className="btn-dropdown">
-              <div className="btn btn-dropdown__btn">
-                Button <i className="fa fa-caret-down"></i>
-              </div>
-              <div className="btn-dropdown__menu">
-                <ul className="list-unstyled">
-                  <li className="btn-dropdown__menu-item">
-                    <button className="btn btn_reset">
-                      <i className="fa fa-pencil"></i> Edit
-                    </button>
-                  </li>
-                  <li className="btn-dropdown__menu-item">
-                    <button className="btn btn_reset">
-                      <i className="fa fa-trash"></i> Delete
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </a>
-          `}
-        </PLCodeBlock>
-      </PLWrapper>
+      <div className="btn-dropdown">
+        <div
+          className="btn btn-dropdown__btn"
+          onClick={this.toggleMenu}
+        >
+          Button <i className="fa fa-caret-down"></i>
+        </div>
+        <div className={this.state.isMenuOpen ? 'btn-dropdown__menu open' : 'btn-dropdown__menu'}>
+          {['Thank', 'Bookmark', 'Edit', 'Delete'].map(item => (
+            <button
+              key={item}
+              className="btn-dropdown__item"
+              onClick={() => console.log('item clicked')}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
     )
   }
 }
+
+const DropdownWithClickOutside = onClickOutside(Dropdown)
+
+const ButtonDropdown = () => (
+  <PLWrapper>
+    <PLHeading text="Button Dropdown" />
+    <PLExample>
+      <DropdownWithClickOutside />
+      <DropdownWithClickOutside />
+    </PLExample>
+    <PLCodeBlock>
+      {`
+        <a href="#" className="btn-dropdown">
+          <div className="btn btn-dropdown__btn">
+            Button <i className="fa fa-caret-down"></i>
+          </div>
+          <div className="btn-dropdown__menu">
+            <ul className="list-unstyled">
+              <li className="btn-dropdown__menu-item">
+                <button className="btn btn_reset">
+                  <i className="fa fa-pencil"></i> Edit
+                </button>
+              </li>
+              <li className="btn-dropdown__menu-item">
+                <button className="btn btn_reset">
+                  <i className="fa fa-trash"></i> Delete
+                </button>
+              </li>
+            </ul>
+          </div>
+        </a>
+      `}
+    </PLCodeBlock>
+  </PLWrapper>
+)
 
 const ButtonSocial = () => (
   <PLWrapper>
